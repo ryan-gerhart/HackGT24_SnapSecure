@@ -2685,13 +2685,12 @@
   Enabled: true
   ScriptAsset: !<reference> ad878572-4a1c-471f-b2fc-67d1efadcf59
   ScriptInputsDefault:
-    {}
+    http: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       participantId: !<string> 1
-      mainFileName: dataOne
       head: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       leftWrist: !<reference.SceneObject> 1c02ea5f-485d-46c6-a447-fce20e5f408c
       rightWrist: !<reference.SceneObject> bfafcfc6-1563-4e42-89c6-f77ab82cc7b3
@@ -2739,6 +2738,7 @@
       rightRing2: !<reference.SceneObject> 3d6a7abb-a90b-47fc-821e-1aa5542f7aa1
       rightRing3: !<reference.SceneObject> 2bf717d2-c466-4145-902e-88903066cfae
       rightRingTip: !<reference.SceneObject> 2d0e1ff5-7114-4142-8d2e-7a6c0794d1d4
+      http: !<MappingBased.httpRequest> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}

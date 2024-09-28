@@ -43,6 +43,7 @@ export class StartDataCollect extends BaseScriptComponent {
             print(this.timer);
             this.dataCollector.stopRecording();
         }
+        this.dataCollector.save();
 
         this.timer = 0;
   }

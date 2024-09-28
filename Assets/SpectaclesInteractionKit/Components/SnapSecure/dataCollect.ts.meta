@@ -25,7 +25,7 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     head: false
-    httpRequest: false
+    http: false
     leftIndex1: false
     leftIndex2: false
     leftIndex3: false
@@ -124,7 +124,7 @@
       rightRing2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       rightRing3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       rightRingTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      httpRequest: !<MappingBased.httpRequest> 00000000-0000-0000-0000-000000000000
+      http: !<MappingBased.httpRequest> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -177,4 +177,4 @@
     - // @input SceneObject rightRing2
     - // @input SceneObject rightRing3
     - // @input SceneObject rightRingTip
-    - // @input httpRequest httpRequest
+    - // @input httpRequest http

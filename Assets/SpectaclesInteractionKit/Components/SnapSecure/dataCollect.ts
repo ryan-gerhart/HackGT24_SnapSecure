@@ -102,7 +102,7 @@ export class DataCollector extends BaseScriptComponent {
     @input
     rightRingTip: SceneObject;
     @input
-    httpRequest: HttpRequest;
+    http: HttpRequest;
     private motionData: HeadHandsMotionData = new HeadHandsMotionData();
 
 //
@@ -115,7 +115,8 @@ export class DataCollector extends BaseScriptComponent {
 //
     public toggleButton(): void {
         if (this.toggleRecording) {
-            this.stopRecordingAndSave();
+            this.stopRecording();
+            this.save();
         } else {
             this.startRecording();
         }
@@ -143,12 +144,8 @@ export class DataCollector extends BaseScriptComponent {
         this.motionData.headHandsMotionRecordList = [];
     }
 
-    public stopRecordingAndSave(): void {
-        if (this.isRecording) {
-            this.isRecording = false;
-            this.saveMotionDataToJson();
-            //this.motionData.headHandsMotionRecordList = [];
-        }
+    public save(): void {
+           this.saveMotionDataToJson();
     }
  
 //    private recordMotionData() {
@@ -274,12 +271,122 @@ export class DataCollector extends BaseScriptComponent {
                 timeStamp: getCurrentTime() - this.startTime,
                 headPosition: this.head.getTransform().getLocalPosition(),
                 headRotation: this.head.getTransform().getLocalRotation(),
+
+                leftWristPosition: this.leftWrist.getTransform().getLocalPosition(),
+                leftWristRotation: this.leftWrist.getTransform().getLocalRotation(),
+
+                leftThumb0Position: this.leftThumb0.getTransform().getLocalPosition(),
+                leftThumb0Rotation: this.leftThumb0.getTransform().getLocalRotation(),
+                leftThumb1Position: this.leftThumb1.getTransform().getLocalPosition(),
+                leftThumb1Rotation: this.leftThumb1.getTransform().getLocalRotation(),
+                leftThumb2Position: this.leftThumb2.getTransform().getLocalPosition(),
+                leftThumb2Rotation: this.leftThumb2.getTransform().getLocalRotation(),
+                leftThumb3Position: this.leftThumb3.getTransform().getLocalPosition(),
+                leftThumb3Rotation: this.leftThumb3.getTransform().getLocalRotation(),
+                leftThumbTipPosition: this.leftThumbTip.getTransform().getLocalPosition(),
+                leftThumbTipRotation: this.leftThumbTip.getTransform().getLocalRotation(),
+
+                leftIndex1Position: this.leftIndex1.getTransform().getLocalPosition(),
+                leftIndex1Rotation: this.leftIndex1.getTransform().getLocalRotation(),
+                leftIndex2Position: this.leftIndex2.getTransform().getLocalPosition(),
+                leftIndex2Rotation: this.leftIndex2.getTransform().getLocalRotation(),
+                leftIndex3Position: this.leftIndex3.getTransform().getLocalPosition(),
+                leftIndex3Rotation: this.leftIndex3.getTransform().getLocalRotation(),
+                leftIndexTipPosition: this.leftIndexTip.getTransform().getLocalPosition(),
+                leftIndexTipRotation: this.leftIndexTip.getTransform().getLocalRotation(),
+
+                leftPinky0Position: this.leftPinky0.getTransform().getLocalPosition(),
+                leftPinky0Rotation: this.leftPinky0.getTransform().getLocalRotation(),
+                leftPinky1Position: this.leftPinky1.getTransform().getLocalPosition(),
+                leftPinky1Rotation: this.leftPinky1.getTransform().getLocalRotation(),
+                leftPinky2Position: this.leftPinky2.getTransform().getLocalPosition(),
+                leftPinky2Rotation: this.leftPinky2.getTransform().getLocalRotation(),
+                leftPinky3Position: this.leftPinky3.getTransform().getLocalPosition(),
+                leftPinky3Rotation: this.leftPinky3.getTransform().getLocalRotation(),
+                leftPinkyTipPosition: this.leftPinkyTip.getTransform().getLocalPosition(),
+                leftPinkyTipRotation: this.leftPinkyTip.getTransform().getLocalRotation(),
+
+                leftMiddle1Position: this.leftMiddle1.getTransform().getLocalPosition(),
+                leftMiddle1Rotation: this.leftMiddle1.getTransform().getLocalRotation(),
+                leftMiddle2Position: this.leftMiddle2.getTransform().getLocalPosition(),
+                leftMiddle2Rotation: this.leftMiddle2.getTransform().getLocalRotation(),
+                leftMiddle3Position: this.leftMiddle3.getTransform().getLocalPosition(),
+                leftMiddle3Rotation: this.leftMiddle3.getTransform().getLocalRotation(),
+                leftMiddleTipPosition: this.leftMiddleTip.getTransform().getLocalPosition(),
+                leftMiddleTipRotation: this.leftMiddleTip.getTransform().getLocalRotation(),
+
+                leftRing1Position: this.leftRing1.getTransform().getLocalPosition(),
+                leftRing1Rotation: this.leftRing1.getTransform().getLocalRotation(),
+                leftRing2Position: this.leftRing2.getTransform().getLocalPosition(),
+                leftRing2Rotation: this.leftRing2.getTransform().getLocalRotation(),
+                leftRing3Position: this.leftRing3.getTransform().getLocalPosition(),
+                leftRing3Rotation: this.leftRing3.getTransform().getLocalRotation(),
+                leftRingTipPosition: this.leftRingTip.getTransform().getLocalPosition(),
+                leftRingTipRotation: this.leftRingTip.getTransform().getLocalRotation(),
+
+                rightWristPosition: this.rightWrist.getTransform().getLocalPosition(),
+                rightWristRotation: this.rightWrist.getTransform().getLocalRotation(),
+
+                rightThumb0Position: this.rightThumb0.getTransform().getLocalPosition(),
+                rightThumb0Rotation: this.rightThumb0.getTransform().getLocalRotation(),
+                rightThumb1Position: this.rightThumb1.getTransform().getLocalPosition(),
+                rightThumb1Rotation: this.rightThumb1.getTransform().getLocalRotation(),
+                rightThumb2Position: this.rightThumb2.getTransform().getLocalPosition(),
+                rightThumb2Rotation: this.rightThumb2.getTransform().getLocalRotation(),
+                rightThumb3Position: this.rightThumb3.getTransform().getLocalPosition(),
+                rightThumb3Rotation: this.rightThumb3.getTransform().getLocalRotation(),
+                rightThumbTipPosition: this.rightThumbTip.getTransform().getLocalPosition(),
+                rightThumbTipRotation: this.rightThumbTip.getTransform().getLocalRotation(),
+
+                rightIndex1Position: this.rightIndex1.getTransform().getLocalPosition(),
+                rightIndex1Rotation: this.rightIndex1.getTransform().getLocalRotation(),
+                rightIndex2Position: this.rightIndex2.getTransform().getLocalPosition(),
+                rightIndex2Rotation: this.rightIndex2.getTransform().getLocalRotation(),
+                rightIndex3Position: this.rightIndex3.getTransform().getLocalPosition(),
+                rightIndex3Rotation: this.rightIndex3.getTransform().getLocalRotation(),
+                rightIndexTipPosition: this.rightIndexTip.getTransform().getLocalPosition(),
+                rightIndexTipRotation: this.rightIndexTip.getTransform().getLocalRotation(),
+
+                rightPinky0Position: this.rightPinky0.getTransform().getLocalPosition(),
+                rightPinky0Rotation: this.rightPinky0.getTransform().getLocalRotation(),
+                rightPinky1Position: this.rightPinky1.getTransform().getLocalPosition(),
+                rightPinky1Rotation: this.rightPinky1.getTransform().getLocalRotation(),
+                rightPinky2Position: this.rightPinky2.getTransform().getLocalPosition(),
+                rightPinky2Rotation: this.rightPinky2.getTransform().getLocalRotation(),
+                rightPinky3Position: this.rightPinky3.getTransform().getLocalPosition(),
+                rightPinky3Rotation: this.rightPinky3.getTransform().getLocalRotation(),
+                rightPinkyTipPosition: this.rightPinkyTip.getTransform().getLocalPosition(),
+                rightPinkyTipRotation: this.rightPinkyTip.getTransform().getLocalRotation(),
+
+                rightMiddle1Position: this.rightMiddle1.getTransform().getLocalPosition(),
+                rightMiddle1Rotation: this.rightMiddle1.getTransform().getLocalRotation(),
+                rightMiddle2Position: this.rightMiddle2.getTransform().getLocalPosition(),
+                rightMiddle2Rotation: this.rightMiddle2.getTransform().getLocalRotation(),
+                rightMiddle3Position: this.rightMiddle3.getTransform().getLocalPosition(),
+                rightMiddle3Rotation: this.rightMiddle3.getTransform().getLocalRotation(),
+                rightMiddleTipPosition: this.rightMiddleTip.getTransform().getLocalPosition(),
+                rightMiddleTipRotation: this.rightMiddleTip.getTransform().getLocalRotation(),
+
+                rightRing1Position: this.rightRing1.getTransform().getLocalPosition(),
+                rightRing1Rotation: this.rightRing1.getTransform().getLocalRotation(),
+                rightRing2Position: this.rightRing2.getTransform().getLocalPosition(),
+                rightRing2Rotation: this.rightRing2.getTransform().getLocalRotation(),
+                rightRing3Position: this.rightRing3.getTransform().getLocalPosition(),
+                rightRing3Rotation: this.rightRing3.getTransform().getLocalRotation(),
+                rightRingTipPosition: this.rightRingTip.getTransform().getLocalPosition(),
+                rightRingTipRotation: this.rightRingTip.getTransform().getLocalRotation(),
             }));
     }
     private saveMotionDataToJson(): void {
         const json = JSON.stringify(this.motionData);
-        sendFile(json);
+        this.sendFile(json);
     }
+    private sendFile(content: string) {
+    print('JSON CONTENT: ' + content);
+    print('file sending');
+    print(this.http.name);
+    this.http.sendJSON(content);
+}
 }
 // hella
 // HeadHandsMotionData.ts
@@ -417,7 +524,4 @@ function wait(seconds: number): void {
     print("delay has started");   
 }
 
-function sendFile(content: string): void {
-    print('file sending');
-    this.httpRequest.sendJSON(this.content);
-}
+

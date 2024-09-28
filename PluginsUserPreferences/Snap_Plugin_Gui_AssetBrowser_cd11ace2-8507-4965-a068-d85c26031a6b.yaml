@@ -1,12 +1,13 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 332
+    size: 334
     values:
       - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr
       - Echopark.hdr/Diffuse
       - Echopark.hdr/Specular
+      - Remote Service Module.remoteServiceModule
       - Render Target.renderTarget
       - Scene.scene
       - SpectaclesInteractionKit/Assets
@@ -140,6 +141,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/SnapSecure/authButtonHandler.js
       - SpectaclesInteractionKit/Components/SnapSecure/dataCollect.js
       - SpectaclesInteractionKit/Components/SnapSecure/dataCollect.ts
+      - SpectaclesInteractionKit/Components/SnapSecure/httpRequest.ts
       - SpectaclesInteractionKit/Components/SnapSecure/startDataCollect.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts

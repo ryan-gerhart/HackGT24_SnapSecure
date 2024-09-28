@@ -6511,13 +6511,12 @@
   Enabled: true
   ScriptAsset: !<reference> ad878572-4a1c-471f-b2fc-67d1efadcf59
   ScriptInputsDefault:
-    {}
+    http: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       participantId: !<string> 1
-      mainFileName: dataOne
       head: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       leftWrist: !<reference.SceneObject> 9cedc16a-c9e5-4a68-864c-3a6193939290
       rightWrist: !<reference.SceneObject> 6c82bb54-cde7-40cc-b09a-ae0407d4a7e4
@@ -6565,6 +6564,7 @@
       rightRing2: !<reference.SceneObject> 7b545c21-569f-42ee-a8bc-6788a927d730
       rightRing3: !<reference.SceneObject> 44d3ae72-34ce-490d-97d1-811ee37f1a40
       rightRingTip: !<reference.SceneObject> 43d0e3f6-94eb-4ee1-a4b3-12cc32c39486
+      http: !<MappingBased.httpRequest> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}

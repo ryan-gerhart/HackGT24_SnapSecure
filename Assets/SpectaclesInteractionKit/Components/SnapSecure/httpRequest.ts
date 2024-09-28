@@ -16,11 +16,12 @@ export class HttpRequest extends BaseScriptComponent {
   }
     //
   public sendJSON(json: string) {
+        print('sendJSON invoked');
         this.jsonToSend = json;
-        this.getExample();
+        this.sendRequest();
   }
 
-  private getExample() {
+  private sendRequest() {
     print("Running GetExample");
 
     // Debugging: Print the value of textToSend
@@ -35,7 +36,7 @@ export class HttpRequest extends BaseScriptComponent {
     let request = RemoteServiceHttpRequest.create();
     request.url = apiUrl;
     request.method = RemoteServiceHttpRequest.HttpRequestMethod.Post;
-    request.body = JSON.stringify(this.jsonToSend); // Create JSON payload
+    request.body = this.jsonToSend; // Create JSON payload
     request.setHeader("Content-Type", "application/json"); // Set content type to JSON
 
     // Handle response and errors

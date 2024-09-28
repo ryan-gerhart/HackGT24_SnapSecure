@@ -4,6 +4,7 @@
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> 597f6fa4-23e5-4230-9e74-1ece142cd000
+    - !<own> e9950f93-f1b3-4be7-a2f2-b0d8ad36679c
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -3960,6 +3961,23 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScriptComponent/637aaf6a-5aaa-456c-a50f-80364fd66add>
+  PrefabRemaps:
+    []
+  Name: httpRequest
+  Enabled: true
+  ScriptAsset: !<reference> 105e794b-a9e8-4c89-96b8-8352874304ef
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      rsm: !<reference.RemoteServiceModule> f5eecc0a-9f9c-4ecf-b08b-e5fc09ea1984
+      textToSend: test
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/63c4924c-a85b-4430-a2df-b369136f2b16>
   PrefabRemaps:
     []
@@ -5397,7 +5415,6 @@
   ScriptInputs:
     "":
       participantId: !<string> 1
-      mainFileName: dataOne
       head: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       leftWrist: !<reference.SceneObject> 8dbfaad1-3c20-46cf-9704-682f8df0c1ac
       rightWrist: !<reference.SceneObject> 9e29ff2d-5fcc-40e9-8a69-260b27438427
@@ -5445,6 +5462,7 @@
       rightRing2: !<reference.SceneObject> d5638ffb-21ea-4e36-bd73-b23a90c4a9fd
       rightRing3: !<reference.SceneObject> a2e6a10e-f0ac-4096-9ef7-b72730da36e4
       rightRingTip: !<reference.SceneObject> 7d6ae339-177b-4e14-bf6b-ca73b8a6f5bb
+      http: !<MappingBased.httpRequest> 637aaf6a-5aaa-456c-a50f-80364fd66add
   ScriptTypes:
     "":
       {}
@@ -7978,6 +7996,21 @@
     []
   Components:
     []
+- !<SceneObject/e9950f93-f1b3-4be7-a2f2-b0d8ad36679c>
+  PrefabRemaps:
+    []
+  Name: httpRequest
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 637aaf6a-5aaa-456c-a50f-80364fd66add
 - !<RenderMeshVisual/ea03a9df-99a0-4d21-8db4-7f1682632c57>
   PrefabRemaps:
     []
