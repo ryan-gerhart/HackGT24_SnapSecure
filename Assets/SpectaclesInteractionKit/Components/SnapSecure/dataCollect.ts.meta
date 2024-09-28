@@ -26,6 +26,7 @@
   ScriptInputsHidden:
     head: false
     http: false
+    id: false
     leftIndex1: false
     leftIndex2: false
     leftIndex3: false
@@ -125,10 +126,12 @@
       rightRing3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       rightRingTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       http: !<MappingBased.httpRequest> 00000000-0000-0000-0000-000000000000
+      id: !<float> 0.000000
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input float id
     - // @input string participantId
     - // @input SceneObject head
     - // @input SceneObject leftWrist

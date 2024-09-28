@@ -21,9 +21,10 @@ messageOriginFlags:
 severitiesFilter:
   type: intset
   value:
-    size: 4
+    size: 5
     values:
       - 0
+      - 1
       - 2
       - 3
       - 4
