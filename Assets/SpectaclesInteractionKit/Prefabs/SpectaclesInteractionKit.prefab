@@ -262,6 +262,39 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScreenTransform/0a42a286-2bf9-46a8-891c-d81de021946f>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
 - !<ScriptComponent/0b47d35b-d9ff-43aa-8c18-6b104c9945a7>
   PrefabRemaps:
     []
@@ -857,6 +890,7 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> bda630b7-a265-4288-824f-963be91e4932
+    - !<own> 48c8794b-e7d9-46a5-a6a0-b97fb3035ae1
   Components:
     - !<own> 5dd7edba-050f-4c5c-824a-261a657461e6
     - !<own> e3ab6887-79f9-4d25-b483-36f79a85ac84
@@ -1856,7 +1890,7 @@
 - !<SceneObject/3fe292bc-8aeb-4142-a141-2a119442c151>
   PrefabRemaps:
     []
-  Name: ToggleButtonCapsuleExample
+  Name: Begin Authentication Toggle
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -2151,6 +2185,22 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/48c8794b-e7d9-46a5-a6a0-b97fb3035ae1>
+  PrefabRemaps:
+    []
+  Name: Begin Icon
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0a42a286-2bf9-46a8-891c-d81de021946f
+    - !<own> 9e25bd7f-8195-4b8b-b3d4-dc8a8d1a0058
 - !<SceneObject/49316d12-58fb-4a4a-b09c-cc6a9303dbe6>
   PrefabRemaps:
     []
@@ -4127,9 +4177,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |
-    Toggle Off
-
+  Text: Begin Auth
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4943,6 +4991,70 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<Text/9e25bd7f-8195-4b8b-b3d4-dc8a8d1a0058>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 7
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: Begin Authentication
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 34
+  Font: !<reference> 709203b6-8b83-40d7-8dda-e5adc4fd2875
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  Fill: !<TextFill/00000000-0000-0000-0000-000000000000>
+    Mode: Solid
+    Color: {x: 1.000000, y: 0.984314, z: 0.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outline: !<OutlineSettings/00000000-0000-0000-0000-000000000000>
+    Enabled: false
+    Fill: !<TextFill/00000000-0000-0000-0000-000000000000>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings/00000000-0000-0000-0000-000000000000>
+    Enabled: false
+    Fill: !<TextFill/00000000-0000-0000-0000-000000000000>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings/00000000-0000-0000-0000-000000000000>
+    Enabled: false
+    Fill: !<TextFill/00000000-0000-0000-0000-000000000000>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout/00000000-0000-0000-0000-000000000000>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+    CapitilizationOverride: None
+  DepthTest: false
 - !<SceneObject/9ed0157f-fd08-47e6-9180-d9eaa60dae8e>
   PrefabRemaps:
     []
@@ -6266,7 +6378,7 @@
 - !<SceneObject/be812c4a-3ec7-4b3f-bb3b-2b8d6f64e6ca>
   PrefabRemaps:
     []
-  Name: Toggle Off Icon
+  Name: Begin Authentication Toggle
   Enabled: true
   Layers: 1
   LocalTransform:

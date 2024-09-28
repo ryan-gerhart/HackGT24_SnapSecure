@@ -2679,9 +2679,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |
-    Toggle Off
-
+  Text: Begin Auth
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -3383,6 +3381,7 @@
     - 15bbca31-0af7-4542-b015-70d824e64422: 094d366d-96a6-41fa-8370-7ec722548ef4
     - 16cfa86e-da32-44bf-8b17-ac3e729ec5f7: 06a38451-aa83-4dae-ae0d-2ba14dd923a6
     - 190712f0-7029-46eb-8fb8-5e3e5c6614d5: 1b788433-8e06-4e82-8925-a271dbc75f15
+    - 19555076-e1e5-4403-857d-91f902df69dc: 9e25bd7f-8195-4b8b-b3d4-dc8a8d1a0058
     - 1a151021-44e9-4f26-9581-e22af688eac9: 342e4a96-22fe-4294-a6f6-8a0c558fa7ab
     - 1a4016bf-8cec-4f79-bda8-c34b6660e85d: 5bfbcaef-c155-4b1e-b816-30d752488a73
     - 1b6bc2be-4ce2-4e78-81f4-80948f1ddc2e: a7a17dd5-7a14-4dce-9b07-93833ad0fe46
@@ -3479,6 +3478,7 @@
     - 55334844-d779-4943-8747-22f53d89b2bd: 598c7349-6249-42d8-ad43-33fffdbca347
     - 556668ea-7cb3-4867-b8a4-6c1446b82743: 76adbca2-3b12-4c60-af15-a3603b9990ed
     - 559622a6-59f3-4164-8c1f-96bb732208d5: 0ffbd19a-68cd-4452-8dae-710c9687bac5
+    - 5600a7fe-0721-4cb3-b0e1-646e8084d238: 48c8794b-e7d9-46a5-a6a0-b97fb3035ae1
     - 566e90b3-eb9a-4b04-b1d1-65523ee95df9: 331579ea-1ff3-4f91-a8ca-a3913e605583
     - 573af08b-bb05-493f-9f1b-d0f9635500b3: fa770c5f-f871-4c87-ab27-e5f050748966
     - 5772ff9e-cf87-4b10-8d74-d9329635251a: 228571d7-8ce9-4fb9-bbda-e35af3e3b802
@@ -3577,6 +3577,7 @@
     - 99075b90-78a8-4904-9d1c-96aadc490f11: a704ef7d-8dae-498f-ad95-27dc3b3ff61c
     - 99f15d90-653c-4d85-9954-5d64fb0f0468: 99e6c117-7864-41d8-b39d-e853018e43ac
     - 9aaade84-7376-41a8-a708-e3bd40eb9cbb: b7be8856-93cb-4049-893c-1b5bca4b2fb6
+    - 9bd5b3d7-3ac6-43e6-aad3-1702b18249fe: 0a42a286-2bf9-46a8-891c-d81de021946f
     - 9dedaa98-754f-4653-bf5f-bec695afd0bd: 3f9892ea-ded0-4c59-ac79-5f72c2580b41
     - 9e29ff2d-5fcc-40e9-8a69-260b27438427: 6c82bb54-cde7-40cc-b09a-ae0407d4a7e4
     - 9ec97033-a73e-431a-810d-7cefb332d2bd: 9ed0157f-fd08-47e6-9180-d9eaa60dae8e
@@ -5729,7 +5730,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 1.000000, z: -60.000000}
+    position: {x: 22.000000, y: 4.000000, z: -60.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.250000, y: 1.250000, z: 1.250000}
     hasSegmentScaleCompensation: false
@@ -5980,7 +5981,7 @@
 - !<SceneObject/a762d926-e47e-4322-9d1d-1e20f558821f>
   PrefabRemaps:
     []
-  Name: ToggleButtonCapsuleExample
+  Name: Begin Authentication Toggle
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -7273,7 +7274,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 5.000000, y: 9.500000, z: 1.000000}
+    position: {x: 5.000000, y: 9.470000, z: 1.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.500000, y: 1.500000, z: 1.500000}
     hasSegmentScaleCompensation: false
@@ -8294,7 +8295,7 @@
 - !<SceneObject/ec4a0fcd-34b2-47f8-8bcf-a0ffd281a2e4>
   PrefabRemaps:
     []
-  Name: Toggle Off Icon
+  Name: Begin Authentication Toggle
   Enabled: true
   Layers: 1
   LocalTransform:
