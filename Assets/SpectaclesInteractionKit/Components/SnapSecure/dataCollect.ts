@@ -108,13 +108,16 @@ export class DataCollector extends BaseScriptComponent {
     private headHandsMotionData : headHandsMotionRecord;
     private json: JSON;
     private startTime: number;
+    private mainJSON = {
+        "headControllersMotionRecordList": []
+    };
     sampleRateHz: number = 90;
 
     isRecording: boolean = false;
     timeReference: number = 0;
     toggleRecording: boolean = false;
     dataToText: string;
-//
+    
     onAwake() {
         this.headHandsMotionData = new headHandsMotionRecord();
         this.timeReference = 0;
@@ -174,7 +177,8 @@ export class DataCollector extends BaseScriptComponent {
     }
     private saveMotionDataToJson(): void {
         print(this.headHandsMotionData.getRecordList().length);
-        this.sendFile(JSON.stringify(this.headHandsMotionData.getRecordList())); //
+        this.mainJSON.headControllersMotionRecordList.push(this.headHandsMotionData.getRecordList());
+        this.sendFile(JSON.stringify(this.mainJSON));
     }
     private sendFile(content: string) {
         print('JSON CONTENT: ' + content);
