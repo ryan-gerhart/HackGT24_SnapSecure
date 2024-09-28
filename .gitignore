@@ -1,0 +1,9 @@
+# Ignore auto-generated Lens Studio build files
+/build/
+/temp/
+
+# Ignore log files
+*.log
+
+# Ignore Lens Studio caches and temporary files
+/Lens Studio.cache/
