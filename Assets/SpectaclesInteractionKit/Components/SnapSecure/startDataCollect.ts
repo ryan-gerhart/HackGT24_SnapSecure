@@ -8,6 +8,7 @@ export class StartDataCollect extends BaseScriptComponent {
     dataCollector : DataCollector
     //
     private interactable: Interactable
+    private timeElapsed: number
     onAwake() {
           this.defineScriptEvents();
     }
@@ -29,9 +30,15 @@ export class StartDataCollect extends BaseScriptComponent {
   setupInteractableCallbacks(interactable: Interactable) {
       interactable.onTriggerEnd.add(() => {
           this.recordData();
+          this.timeElapsed = 0;
       });
   }
   private recordData() {
-        this.dataCollector.startRecording();
+        while (this.timeElapsed < 2) {
+            this.dataCollector.startRecording();
+            this.timeElapsed += getDeltaTime();
+        }
+        this.dataCollector.stopRecording();
+        
   }
 }
