@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 330
+    size: 331
     values:
       - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr
@@ -9,7 +9,6 @@ CollapsedEntities:
       - Echopark.hdr/Specular
       - Render Target.renderTarget
       - Scene.scene
-      - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
@@ -26,6 +25,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/NormalBasedTargetOutline.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkInactive.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkRadial.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonGreenRadial.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOffIcon.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnDefault.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnIcon.mat
@@ -135,6 +135,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
+      - SpectaclesInteractionKit/Components/SnapSecure/dataCollect.ts
       - SpectaclesInteractionKit/Components/UI
       - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts

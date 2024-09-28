@@ -1,5 +1,5 @@
 ExternalSources:
   type: "std::map<class Es::Uuid,class Es::Path,struct std::less<class Es::Uuid>,class std::allocator<struct std::pair<class Es::Uuid const ,class Es::Path> > >"
   value:
-    []
+    - 861a0c52-8fea-4eda-90b8-39815f750043: "C:/Users/kille/Downloads/dataCollect.ts"
   options: 4
