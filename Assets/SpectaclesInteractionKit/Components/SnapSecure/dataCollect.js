@@ -50,7 +50,7 @@ const { Scene, Object3D, Timer, ScriptComponent } = require('lens-studio');
 //@input SceneObject rightPinky3
 
 //@input float sampleRateHz = 60.0 
-export class HeadHandsMotionRecorder extends ScriptComponent {
+class HeadHandsMotionRecorder extends ScriptComponent {
     @Header("File Settings")
     mainFileName: string = "mainFileName";
     headsetUsed: string = "headsetUsed";

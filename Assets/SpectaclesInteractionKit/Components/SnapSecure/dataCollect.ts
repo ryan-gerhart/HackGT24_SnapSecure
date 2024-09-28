@@ -1,130 +1,114 @@
 // dataCollect.ts
-const { Scene, Object3D, Timer, ScriptComponent } = require('lens-studio');
+import { Interactable } from '../Interaction/Interactable/Interactable';
 // Head and Hands Tracking Objects
-//@input SceneObject head
-//@input SceneObject leftWrist
-//@input SceneObject rightWrist
 
-//@input SceneObject leftThumb0
-//@input SceneObject leftThumb1
-//@input SceneObject leftThumb2
-//@input SceneObject leftThumb3
-//@input SceneObject leftThumbTip
-
-//@input SceneObject leftIndex1
-//@input SceneObject leftIndex2
-//@input SceneObject leftIndex3
-//@input SceneObject leftIndexTip
-
-//@input SceneObject leftMiddle1
-//@input SceneObject leftMiddle2
-//@input SceneObject leftMiddle3
-//@input SceneObject leftMiddleTip
-
-//@input SceneObject leftRing1
-//@input SceneObject leftRing2
-//@input SceneObject leftRing3
-//@input SceneObject leftRingTip
-
-//@input SceneObject leftPinky0
-//@input SceneObject leftPinky1
-//@input SceneObject leftPinky2
-//@input SceneObject leftPinky3
-//@input SceneObject leftPinkyTip
-
-//@input SceneObject rightThumb0
-//@input SceneObject rightThumb1
-//@input SceneObject rightThumb2
-//@input SceneObject rightThumb3
-//@input SceneObject rightThumbTip
-
-//@input SceneObject rightIndex1
-//@input SceneObject rightIndex2
-//@input SceneObject rightIndex3
-//@input SceneObject rightIndexTip
-
-//@input SceneObject rightMiddle1
-//@input SceneObject rightMiddle2
-//@input SceneObject rightMiddle3
-//@input SceneObject rightMiddleTip
-
-//@input SceneObject rightRing1
-//@input SceneObject rightRing2
-//@input SceneObject rightRing3
-//@input SceneObject rightRingTip
-
-//@input SceneObject rightPinky0
-//@input SceneObject rightPinky1
-//@input SceneObject rightPinky2
-//@input SceneObject rightPinky3
-//@input SceneObject rightPinkyTip
-
-//@input float sampleRateHz = 60.0 
-export class HeadHandsMotionRecorder extends ScriptComponent {
-    @Header("File Settings")
-    mainFileName: string = "mainFileName";
-    headsetUsed: string = "headsetUsed";
-    dataCollectionType: string = "HeadAndHands";
-    recordingType: string = "recordingType";
-    testType: string = "testType";
-    participantIdTracker: any; // Assuming this is defined elsewhere
-
-    @Header("Motion Tracking Objects")
-    head: Object3D;
-    leftWrist: Object3D;
-    rightWrist: Object3D;
-    leftThumb0: Object3D;
-    leftThumb1: Object3D;
-    leftThumb2: Object3D;
-    leftThumb3: Object3D;
-    leftThumbTip: Object3D;
-    leftIndex1: Object3D;
-    leftIndex2: Object3D;
-    leftIndex3: Object3D;
-    leftIndexTip: Object3D;
-    leftPinky0: Object3D;
-    leftPinky1: Object3D;
-    leftPinky2: Object3D;
-    leftPinky3: Object3D;
-    leftPinkyTip: Object3D;
-    leftMiddle1: Object3D;
-    leftMiddle2: Object3D;
-    leftMiddle3: Object3D;
-    leftMiddleTip: Object3D;
-    leftRing1: Object3D;
-    leftRing2: Object3D;
-    leftRing3: Object3D;
-    leftRingTip: Object3D;
-    rightThumb0: Object3D;
-    rightThumb1: Object3D;
-    rightThumb2: Object3D;
-    rightThumb3: Object3D;
-    rightThumbTip: Object3D;
-    rightIndex1: Object3D;
-    rightIndex2: Object3D;
-    rightIndex3: Object3D;
-    rightIndexTip: Object3D;
-    rightPinky0: Object3D;
-    rightPinky1: Object3D;
-    rightPinky2: Object3D;
-    rightPinky3: Object3D;
-    rightPinkyTip: Object3D;
-    rightMiddle1: Object3D;
-    rightMiddle2: Object3D;
-    rightMiddle3: Object3D;
-    rightMiddleTip: Object3D;
-    rightRing1: Object3D;
-    rightRing2: Object3D;
-    rightRing3: Object3D;
-    rightRingTip: Object3D;
+@component
+export class HeadHandsMotionRecorder extends BaseScriptComponent {
+    @input
+    participantId: string;
+    @input
+    mainFileName: string;
+    @input
+    head: SceneObject;
+    @input
+    leftWrist: SceneObject;
+    @input
+    rightWrist: SceneObject;
+    @input
+    leftThumb0: SceneObject;
+    @input
+    leftThumb1: SceneObject;
+    @input
+    leftThumb2: SceneObject;
+    @input
+    leftThumb3: SceneObject;
+    @input
+    leftThumbTip: SceneObject;
+    @input
+    leftIndex1: SceneObject;
+    @input
+    leftIndex2: SceneObject;
+    @input
+    leftIndex3: SceneObject;
+    @input
+    leftIndexTip: SceneObject;
+    @input
+    leftPinky0: SceneObject;
+    @input
+    leftPinky1: SceneObject;
+    @input
+    leftPinky2: SceneObject;
+    @input
+    leftPinky3: SceneObject;
+    @input
+    leftPinkyTip: SceneObject;
+    @input
+    leftMiddle1: SceneObject;
+    @input
+    leftMiddle2: SceneObject;
+    @input
+    leftMiddle3: SceneObject;
+    @input
+    leftMiddleTip: SceneObject;
+    @input
+    leftRing1: SceneObject;
+    @input
+    leftRing2: SceneObject;
+    @input
+    leftRing3: SceneObject;
+    @input
+    leftRingTip: SceneObject;
+    @input
+    rightThumb0: SceneObject;
+    @input
+    rightThumb1: SceneObject;
+    @input
+    rightThumb2: SceneObject;
+    @input
+    rightThumb3: SceneObject;
+    @input
+    rightThumbTip: SceneObject;
+    @input
+    rightIndex1: SceneObject;
+    @input
+    rightIndex2: SceneObject;
+    @input
+    rightIndex3: SceneObject;
+    @input
+    rightIndexTip: SceneObject;
+    @input
+    rightPinky0: SceneObject;
+    @input
+    rightPinky1: SceneObject;
+    @input
+    rightPinky2: SceneObject;
+    @input
+    rightPinky3: SceneObject;
+    @input
+    rightPinkyTip: SceneObject;
+    @input
+    rightMiddle1: SceneObject;
+    @input
+    rightMiddle2: SceneObject;
+    @input
+    rightMiddle3: SceneObject;
+    @input
+    rightMiddleTip: SceneObject;
+    @input
+    rightRing1: SceneObject;
+    @input
+    rightRing2: SceneObject;
+    @input
+    rightRing3: SceneObject;
+    @input
+    rightRingTip: SceneObject;
 
     private motionData: HeadHandsMotionData = new HeadHandsMotionData();
 
-    @Header("Recording Settings")
+//
     startTime: number;
     sampleRateHz: number = 90;
 
-    @Header("Debug")
     isRecording: boolean = false;
     toggleRecording: boolean = false;
     dataToText: string;
@@ -137,15 +121,7 @@ export class HeadHandsMotionRecorder extends ScriptComponent {
         }
         this.toggleRecording = !this.toggleRecording;
     }
-
-    public toggleButton(toggle: boolean): void {
-        if (toggle) {
-            this.startRecording();
-        } else {
-            this.stopRecordingAndSave();
-        }
-    }
-
+    
     public startRecording(): void {
         if (!this.isRecording) {
             this.isRecording = true;
@@ -186,119 +162,119 @@ export class HeadHandsMotionRecorder extends ScriptComponent {
     private async recordMotionData(): Promise<void> {
         while (this.isRecording) {
             this.motionData.headHandsMotionRecordList.push(new HeadHandsMotionRecord({
-                id: this.participantIdTracker.getParticipantID(),
+                id: this.participantId,
                 timeStamp: getCurrentTime() - this.startTime,
-                headPosition: this.head.getPosition(),
-                headRotation: this.head.getRotation(),
+                headPosition: this.head.getTransform().getLocalPosition(),
+                headRotation: this.head.getTransform().getLocalRotation(),
 
-                leftWristPosition: this.leftWrist.getPosition(),
-                leftWristRotation: this.leftWrist.getRotation(),
+                leftWristPosition: this.leftWrist.getTransform().getLocalPosition(),
+                leftWristRotation: this.leftWrist.getTransform().getLocalRotation(),
 
-                leftThumb0Position: this.leftThumb0.getPosition(),
-                leftThumb0Rotation: this.leftThumb0.getRotation(),
-                leftThumb1Position: this.leftThumb1.getPosition(),
-                leftThumb1Rotation: this.leftThumb1.getRotation(),
-                leftThumb2Position: this.leftThumb2.getPosition(),
-                leftThumb2Rotation: this.leftThumb2.getRotation(),
-                leftThumb3Position: this.leftThumb3.getPosition(),
-                leftThumb3Rotation: this.leftThumb3.getRotation(),
-                leftThumbTipPosition: this.leftThumbTip.getPosition(),
-                leftThumbTipRotation: this.leftThumbTip.getRotation(),
+                leftThumb0Position: this.leftThumb0.getTransform().getLocalPosition(),
+                leftThumb0Rotation: this.leftThumb0.getTransform().getLocalRotation(),
+                leftThumb1Position: this.leftThumb1.getTransform().getLocalPosition(),
+                leftThumb1Rotation: this.leftThumb1.getTransform().getLocalRotation(),
+                leftThumb2Position: this.leftThumb2.getTransform().getLocalPosition(),
+                leftThumb2Rotation: this.leftThumb2.getTransform().getLocalRotation(),
+                leftThumb3Position: this.leftThumb3.getTransform().getLocalPosition(),
+                leftThumb3Rotation: this.leftThumb3.getTransform().getLocalRotation(),
+                leftThumbTipPosition: this.leftThumbTip.getTransform().getLocalPosition(),
+                leftThumbTipRotation: this.leftThumbTip.getTransform().getLocalRotation(),
 
-                leftIndex1Position: this.leftIndex1.getPosition(),
-                leftIndex1Rotation: this.leftIndex1.getRotation(),
-                leftIndex2Position: this.leftIndex2.getPosition(),
-                leftIndex2Rotation: this.leftIndex2.getRotation(),
-                leftIndex3Position: this.leftIndex3.getPosition(),
-                leftIndex3Rotation: this.leftIndex3.getRotation(),
-                leftIndexTipPosition: this.leftIndexTip.getPosition(),
-                leftIndexTipRotation: this.leftIndexTip.getRotation(),
+                leftIndex1Position: this.leftIndex1.getTransform().getLocalPosition(),
+                leftIndex1Rotation: this.leftIndex1.getTransform().getLocalRotation(),
+                leftIndex2Position: this.leftIndex2.getTransform().getLocalPosition(),
+                leftIndex2Rotation: this.leftIndex2.getTransform().getLocalRotation(),
+                leftIndex3Position: this.leftIndex3.getTransform().getLocalPosition(),
+                leftIndex3Rotation: this.leftIndex3.getTransform().getLocalRotation(),
+                leftIndexTipPosition: this.leftIndexTip.getTransform().getLocalPosition(),
+                leftIndexTipRotation: this.leftIndexTip.getTransform().getLocalRotation(),
 
-                leftPinky0Position: this.leftPinky0.getPosition(),
-                leftPinky0Rotation: this.leftPinky0.getRotation(),
-                leftPinky1Position: this.leftPinky1.getPosition(),
-                leftPinky1Rotation: this.leftPinky1.getRotation(),
-                leftPinky2Position: this.leftPinky2.getPosition(),
-                leftPinky2Rotation: this.leftPinky2.getRotation(),
-                leftPinky3Position: this.leftPinky3.getPosition(),
-                leftPinky3Rotation: this.leftPinky3.getRotation(),
-                leftPinkyTipPosition: this.leftPinkyTip.getPosition(),
-                leftPinkyTipRotation: this.leftPinkyTip.getRotation(),
+                leftPinky0Position: this.leftPinky0.getTransform().getLocalPosition(),
+                leftPinky0Rotation: this.leftPinky0.getTransform().getLocalRotation(),
+                leftPinky1Position: this.leftPinky1.getTransform().getLocalPosition(),
+                leftPinky1Rotation: this.leftPinky1.getTransform().getLocalRotation(),
+                leftPinky2Position: this.leftPinky2.getTransform().getLocalPosition(),
+                leftPinky2Rotation: this.leftPinky2.getTransform().getLocalRotation(),
+                leftPinky3Position: this.leftPinky3.getTransform().getLocalPosition(),
+                leftPinky3Rotation: this.leftPinky3.getTransform().getLocalRotation(),
+                leftPinkyTipPosition: this.leftPinkyTip.getTransform().getLocalPosition(),
+                leftPinkyTipRotation: this.leftPinkyTip.getTransform().getLocalRotation(),
 
-                leftMiddle1Position: this.leftMiddle1.getPosition(),
-                leftMiddle1Rotation: this.leftMiddle1.getRotation(),
-                leftMiddle2Position: this.leftMiddle2.getPosition(),
-                leftMiddle2Rotation: this.leftMiddle2.getRotation(),
-                leftMiddle3Position: this.leftMiddle3.getPosition(),
-                leftMiddle3Rotation: this.leftMiddle3.getRotation(),
-                leftMiddleTipPosition: this.leftMiddleTip.getPosition(),
-                leftMiddleTipRotation: this.leftMiddleTip.getRotation(),
+                leftMiddle1Position: this.leftMiddle1.getTransform().getLocalPosition(),
+                leftMiddle1Rotation: this.leftMiddle1.getTransform().getLocalRotation(),
+                leftMiddle2Position: this.leftMiddle2.getTransform().getLocalPosition(),
+                leftMiddle2Rotation: this.leftMiddle2.getTransform().getLocalRotation(),
+                leftMiddle3Position: this.leftMiddle3.getTransform().getLocalPosition(),
+                leftMiddle3Rotation: this.leftMiddle3.getTransform().getLocalRotation(),
+                leftMiddleTipPosition: this.leftMiddleTip.getTransform().getLocalPosition(),
+                leftMiddleTipRotation: this.leftMiddleTip.getTransform().getLocalRotation(),
 
-                leftRing1Position: this.leftRing1.getPosition(),
-                leftRing1Rotation: this.leftRing1.getRotation(),
-                leftRing2Position: this.leftRing2.getPosition(),
-                leftRing2Rotation: this.leftRing2.getRotation(),
-                leftRing3Position: this.leftRing3.getPosition(),
-                leftRing3Rotation: this.leftRing3.getRotation(),
-                leftRingTipPosition: this.leftRingTip.getPosition(),
-                leftRingTipRotation: this.leftRingTip.getRotation(),
+                leftRing1Position: this.leftRing1.getTransform().getLocalPosition(),
+                leftRing1Rotation: this.leftRing1.getTransform().getLocalRotation(),
+                leftRing2Position: this.leftRing2.getTransform().getLocalPosition(),
+                leftRing2Rotation: this.leftRing2.getTransform().getLocalRotation(),
+                leftRing3Position: this.leftRing3.getTransform().getLocalPosition(),
+                leftRing3Rotation: this.leftRing3.getTransform().getLocalRotation(),
+                leftRingTipPosition: this.leftRingTip.getTransform().getLocalPosition(),
+                leftRingTipRotation: this.leftRingTip.getTransform().getLocalRotation(),
 
-                rightWristPosition: this.rightWrist.getPosition(),
-                rightWristRotation: this.rightWrist.getRotation(),
+                rightWristPosition: this.rightWrist.getTransform().getLocalPosition(),
+                rightWristRotation: this.rightWrist.getTransform().getLocalRotation(),
 
-                rightThumb0Position: this.rightThumb0.getPosition(),
-                rightThumb0Rotation: this.rightThumb0.getRotation(),
-                rightThumb1Position: this.rightThumb1.getPosition(),
-                rightThumb1Rotation: this.rightThumb1.getRotation(),
-                rightThumb2Position: this.rightThumb2.getPosition(),
-                rightThumb2Rotation: this.rightThumb2.getRotation(),
-                rightThumb3Position: this.rightThumb3.getPosition(),
-                rightThumb3Rotation: this.rightThumb3.getRotation(),
-                rightThumbTipPosition: this.rightThumbTip.getPosition(),
-                rightThumbTipRotation: this.rightThumbTip.getRotation(),
+                rightThumb0Position: this.rightThumb0.getTransform().getLocalPosition(),
+                rightThumb0Rotation: this.rightThumb0.getTransform().getLocalRotation(),
+                rightThumb1Position: this.rightThumb1.getTransform().getLocalPosition(),
+                rightThumb1Rotation: this.rightThumb1.getTransform().getLocalRotation(),
+                rightThumb2Position: this.rightThumb2.getTransform().getLocalPosition(),
+                rightThumb2Rotation: this.rightThumb2.getTransform().getLocalRotation(),
+                rightThumb3Position: this.rightThumb3.getTransform().getLocalPosition(),
+                rightThumb3Rotation: this.rightThumb3.getTransform().getLocalRotation(),
+                rightThumbTipPosition: this.rightThumbTip.getTransform().getLocalPosition(),
+                rightThumbTipRotation: this.rightThumbTip.getTransform().getLocalRotation(),
 
-                rightIndex1Position: this.rightIndex1.getPosition(),
-                rightIndex1Rotation: this.rightIndex1.getRotation(),
-                rightIndex2Position: this.rightIndex2.getPosition(),
-                rightIndex2Rotation: this.rightIndex2.getRotation(),
-                rightIndex3Position: this.rightIndex3.getPosition(),
-                rightIndex3Rotation: this.rightIndex3.getRotation(),
-                rightIndexTipPosition: this.rightIndexTip.getPosition(),
-                rightIndexTipRotation: this.rightIndexTip.getRotation(),
+                rightIndex1Position: this.rightIndex1.getTransform().getLocalPosition(),
+                rightIndex1Rotation: this.rightIndex1.getTransform().getLocalRotation(),
+                rightIndex2Position: this.rightIndex2.getTransform().getLocalPosition(),
+                rightIndex2Rotation: this.rightIndex2.getTransform().getLocalRotation(),
+                rightIndex3Position: this.rightIndex3.getTransform().getLocalPosition(),
+                rightIndex3Rotation: this.rightIndex3.getTransform().getLocalRotation(),
+                rightIndexTipPosition: this.rightIndexTip.getTransform().getLocalPosition(),
+                rightIndexTipRotation: this.rightIndexTip.getTransform().getLocalRotation(),
 
-                rightPinky0Position: this.rightPinky0.getPosition(),
-                rightPinky0Rotation: this.rightPinky0.getRotation(),
-                rightPinky1Position: this.rightPinky1.getPosition(),
-                rightPinky1Rotation: this.rightPinky1.getRotation(),
-                rightPinky2Position: this.rightPinky2.getPosition(),
-                rightPinky2Rotation: this.rightPinky2.getRotation(),
-                rightPinky3Position: this.rightPinky3.getPosition(),
-                rightPinky3Rotation: this.rightPinky3.getRotation(),
-                rightPinkyTipPosition: this.rightPinkyTip.getPosition(),
-                rightPinkyTipRotation: this.rightPinkyTip.getRotation(),
+                rightPinky0Position: this.rightPinky0.getTransform().getLocalPosition(),
+                rightPinky0Rotation: this.rightPinky0.getTransform().getLocalRotation(),
+                rightPinky1Position: this.rightPinky1.getTransform().getLocalPosition(),
+                rightPinky1Rotation: this.rightPinky1.getTransform().getLocalRotation(),
+                rightPinky2Position: this.rightPinky2.getTransform().getLocalPosition(),
+                rightPinky2Rotation: this.rightPinky2.getTransform().getLocalRotation(),
+                rightPinky3Position: this.rightPinky3.getTransform().getLocalPosition(),
+                rightPinky3Rotation: this.rightPinky3.getTransform().getLocalRotation(),
+                rightPinkyTipPosition: this.rightPinkyTip.getTransform().getLocalPosition(),
+                rightPinkyTipRotation: this.rightPinkyTip.getTransform().getLocalRotation(),
 
-                rightMiddle1Position: this.rightMiddle1.getPosition(),
-                rightMiddle1Rotation: this.rightMiddle1.getRotation(),
-                rightMiddle2Position: this.rightMiddle2.getPosition(),
-                rightMiddle2Rotation: this.rightMiddle2.getRotation(),
-                rightMiddle3Position: this.rightMiddle3.getPosition(),
-                rightMiddle3Rotation: this.rightMiddle3.getRotation(),
-                rightMiddleTipPosition: this.rightMiddleTip.getPosition(),
-                rightMiddleTipRotation: this.rightMiddleTip.getRotation(),
+                rightMiddle1Position: this.rightMiddle1.getTransform().getLocalPosition(),
+                rightMiddle1Rotation: this.rightMiddle1.getTransform().getLocalRotation(),
+                rightMiddle2Position: this.rightMiddle2.getTransform().getLocalPosition(),
+                rightMiddle2Rotation: this.rightMiddle2.getTransform().getLocalRotation(),
+                rightMiddle3Position: this.rightMiddle3.getTransform().getLocalPosition(),
+                rightMiddle3Rotation: this.rightMiddle3.getTransform().getLocalRotation(),
+                rightMiddleTipPosition: this.rightMiddleTip.getTransform().getLocalPosition(),
+                rightMiddleTipRotation: this.rightMiddleTip.getTransform().getLocalRotation(),
 
-                rightRing1Position: this.rightRing1.getPosition(),
-                rightRing1Rotation: this.rightRing1.getRotation(),
-                rightRing2Position: this.rightRing2.getPosition(),
-                rightRing2Rotation: this.rightRing2.getRotation(),
-                rightRing3Position: this.rightRing3.getPosition(),
-                rightRing3Rotation: this.rightRing3.getRotation(),
-                rightRingTipPosition: this.rightRingTip.getPosition(),
-                rightRingTipRotation: this.rightRingTip.getRotation(),
+                rightRing1Position: this.rightRing1.getTransform().getLocalPosition(),
+                rightRing1Rotation: this.rightRing1.getTransform().getLocalRotation(),
+                rightRing2Position: this.rightRing2.getTransform().getLocalPosition(),
+                rightRing2Rotation: this.rightRing2.getTransform().getLocalRotation(),
+                rightRing3Position: this.rightRing3.getTransform().getLocalPosition(),
+                rightRing3Rotation: this.rightRing3.getTransform().getLocalRotation(),
+                rightRingTipPosition: this.rightRingTip.getTransform().getLocalPosition(),
+                rightRingTipRotation: this.rightRingTip.getTransform().getLocalRotation(),
             }));
             await wait(this.sampleRateHz);
         }
     }
-
+//
     private async recordMotionDataWithDuration(duration: number): Promise<void> {
         const start = getCurrentTime();
         while (this.isRecording && (getCurrentTime() - start) < duration) {
@@ -315,120 +291,120 @@ export class HeadHandsMotionRecorder extends ScriptComponent {
         saveFile(fileName, json);
     }
 }
-
+// hella
 // HeadHandsMotionData.ts
 export class HeadHandsMotionData {
     headHandsMotionRecordList: HeadHandsMotionRecord[] = [];
 }
-
+//
 // HeadHandsMotionRecord.ts
 export class HeadHandsMotionRecord {
     id: string;
     timeStamp: number;
-    headPosition: Vector3;
-    headRotation: Quaternion;
+    headPosition: vec3;
+    headRotation: quat;
 
-    leftWristPosition: Vector3;
-    leftWristRotation: Quaternion;
-    leftThumb0Position: Vector3;
-    leftThumb0Rotation: Quaternion;
-    leftThumb1Position: Vector3;
-    leftThumb1Rotation: Quaternion;
-    leftThumb2Position: Vector3;
-    leftThumb2Rotation: Quaternion;
-    leftThumb3Position: Vector3;
-    leftThumb3Rotation: Quaternion;
-    leftThumbTipPosition: Vector3;
-    leftThumbTipRotation: Quaternion;
+    leftWristPosition: vec3;
+    leftWristRotation: quat;
+    leftThumb0Position: vec3;
+    leftThumb0Rotation: quat;
+    leftThumb1Position: vec3;
+    leftThumb1Rotation: quat;
+    leftThumb2Position: vec3;
+    leftThumb2Rotation: quat;
+    leftThumb3Position: vec3;
+    leftThumb3Rotation: quat;
+    leftThumbTipPosition: vec3;
+    leftThumbTipRotation: quat;
 
-    leftIndex1Position: Vector3;
-    leftIndex1Rotation: Quaternion;
-    leftIndex2Position: Vector3;
-    leftIndex2Rotation: Quaternion;
-    leftIndex3Position: Vector3;
-    leftIndex3Rotation: Quaternion;
-    leftIndexTipPosition: Vector3;
-    leftIndexTipRotation: Quaternion;
+    leftIndex1Position: vec3;
+    leftIndex1Rotation: quat;
+    leftIndex2Position: vec3;
+    leftIndex2Rotation: quat;
+    leftIndex3Position: vec3;
+    leftIndex3Rotation: quat;
+    leftIndexTipPosition: vec3;
+    leftIndexTipRotation: quat;
 
-    leftPinky0Position: Vector3;
-    leftPinky0Rotation: Quaternion;
-    leftPinky1Position: Vector3;
-    leftPinky1Rotation: Quaternion;
-    leftPinky2Position: Vector3;
-    leftPinky2Rotation: Quaternion;
-    leftPinky3Position: Vector3;
-    leftPinky3Rotation: Quaternion;
-    leftPinkyTipPosition: Vector3;
-    leftPinkyTipRotation: Quaternion;
+    leftPinky0Position: vec3;
+    leftPinky0Rotation: quat;
+    leftPinky1Position: vec3;
+    leftPinky1Rotation: quat;
+    leftPinky2Position: vec3;
+    leftPinky2Rotation: quat;
+    leftPinky3Position: vec3;
+    leftPinky3Rotation: quat;
+    leftPinkyTipPosition: vec3;
+    leftPinkyTipRotation: quat;
 
-    leftMiddle1Position: Vector3;
-    leftMiddle1Rotation: Quaternion;
-    leftMiddle2Position: Vector3;
-    leftMiddle2Rotation: Quaternion;
-    leftMiddle3Position: Vector3;
-    leftMiddle3Rotation: Quaternion;
-    leftMiddleTipPosition: Vector3;
-    leftMiddleTipRotation: Quaternion;
+    leftMiddle1Position: vec3;
+    leftMiddle1Rotation: quat;
+    leftMiddle2Position: vec3;
+    leftMiddle2Rotation: quat;
+    leftMiddle3Position: vec3;
+    leftMiddle3Rotation: quat;
+    leftMiddleTipPosition: vec3;
+    leftMiddleTipRotation: quat;
 
-    leftRing1Position: Vector3;
-    leftRing1Rotation: Quaternion;
-    leftRing2Position: Vector3;
-    leftRing2Rotation: Quaternion;
-    leftRing3Position: Vector3;
-    leftRing3Rotation: Quaternion;
-    leftRingTipPosition: Vector3;
-    leftRingTipRotation: Quaternion;
+    leftRing1Position: vec3;
+    leftRing1Rotation: quat;
+    leftRing2Position: vec3;
+    leftRing2Rotation: quat;
+    leftRing3Position: vec3;
+    leftRing3Rotation: quat;
+    leftRingTipPosition: vec3;
+    leftRingTipRotation: quat;
 
-    rightWristPosition: Vector3;
-    rightWristRotation: Quaternion;
-    rightThumb0Position: Vector3;
-    rightThumb0Rotation: Quaternion;
-    rightThumb1Position: Vector3;
-    rightThumb1Rotation: Quaternion;
-    rightThumb2Position: Vector3;
-    rightThumb2Rotation: Quaternion;
-    rightThumb3Position: Vector3;
-    rightThumb3Rotation: Quaternion;
-    rightThumbTipPosition: Vector3;
-    rightThumbTipRotation: Quaternion;
+    rightWristPosition: vec3;
+    rightWristRotation: quat;
+    rightThumb0Position: vec3;
+    rightThumb0Rotation: quat;
+    rightThumb1Position: vec3;
+    rightThumb1Rotation: quat;
+    rightThumb2Position: vec3;
+    rightThumb2Rotation: quat;
+    rightThumb3Position: vec3;
+    rightThumb3Rotation: quat;
+    rightThumbTipPosition: vec3;
+    rightThumbTipRotation: quat;
 
-    rightIndex1Position: Vector3;
-    rightIndex1Rotation: Quaternion;
-    rightIndex2Position: Vector3;
-    rightIndex2Rotation: Quaternion;
-    rightIndex3Position: Vector3;
-    rightIndex3Rotation: Quaternion;
-    rightIndexTipPosition: Vector3;
-    rightIndexTipRotation: Quaternion;
+    rightIndex1Position: vec3;
+    rightIndex1Rotation: quat;
+    rightIndex2Position: vec3;
+    rightIndex2Rotation: quat;
+    rightIndex3Position: vec3;
+    rightIndex3Rotation: quat;
+    rightIndexTipPosition: vec3;
+    rightIndexTipRotation: quat;
 
-    rightPinky0Position: Vector3;
-    rightPinky0Rotation: Quaternion;
-    rightPinky1Position: Vector3;
-    rightPinky1Rotation: Quaternion;
-    rightPinky2Position: Vector3;
-    rightPinky2Rotation: Quaternion;
-    rightPinky3Position: Vector3;
-    rightPinky3Rotation: Quaternion;
-    rightPinkyTipPosition: Vector3;
-    rightPinkyTipRotation: Quaternion;
+    rightPinky0Position: vec3;
+    rightPinky0Rotation: quat;
+    rightPinky1Position: vec3;
+    rightPinky1Rotation: quat;
+    rightPinky2Position: vec3;
+    rightPinky2Rotation: quat;
+    rightPinky3Position: vec3;
+    rightPinky3Rotation: quat;
+    rightPinkyTipPosition: vec3;
+    rightPinkyTipRotation: quat;
 
-    rightMiddle1Position: Vector3;
-    rightMiddle1Rotation: Quaternion;
-    rightMiddle2Position: Vector3;
-    rightMiddle2Rotation: Quaternion;
-    rightMiddle3Position: Vector3;
-    rightMiddle3Rotation: Quaternion;
-    rightMiddleTipPosition: Vector3;
-    rightMiddleTipRotation: Quaternion;
+    rightMiddle1Position: vec3;
+    rightMiddle1Rotation: quat;
+    rightMiddle2Position: vec3;
+    rightMiddle2Rotation: quat;
+    rightMiddle3Position: vec3;
+    rightMiddle3Rotation: quat;
+    rightMiddleTipPosition: vec3;
+    rightMiddleTipRotation: quat;
 
-    rightRing1Position: Vector3;
-    rightRing1Rotation: Quaternion;
-    rightRing2Position: Vector3;
-    rightRing2Rotation: Quaternion;
-    rightRing3Position: Vector3;
-    rightRing3Rotation: Quaternion;
-    rightRingTipPosition: Vector3;
-    rightRingTipRotation: Quaternion;
+    rightRing1Position: vec3;
+    rightRing1Rotation: quat;
+    rightRing2Position: vec3;
+    rightRing2Rotation: quat;
+    rightRing3Position: vec3;
+    rightRing3Rotation: quat;
+    rightRingTipPosition: vec3;
+    rightRingTipRotation: quat;
 
     constructor(data: Partial<HeadHandsMotionRecord>) {
         Object.assign(this, data);
@@ -439,9 +415,16 @@ export class HeadHandsMotionRecord {
 function getCurrentTime(): number {
     return Date.now();
 }
-
-function wait(milliseconds: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
+// the
+function wait(seconds: number): void {
+    var delayedEvent = this.createEvent("DelayedCallbackEvent");
+    delayedEvent.bind(function(eventData)
+    {
+        print("Delay is over");
+    });
+    
+    delayedEvent.reset(seconds);
+    print("delay has started");   
 }
 
 function saveFile(fileName: string, content: string): void {

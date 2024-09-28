@@ -24,14 +24,157 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    head: false
+    leftIndex1: false
+    leftIndex2: false
+    leftIndex3: false
+    leftIndexTip: false
+    leftMiddle1: false
+    leftMiddle2: false
+    leftMiddle3: false
+    leftMiddleTip: false
+    leftPinky0: false
+    leftPinky1: false
+    leftPinky2: false
+    leftPinky3: false
+    leftPinkyTip: false
+    leftRing1: false
+    leftRing2: false
+    leftRing3: false
+    leftRingTip: false
+    leftThumb0: false
+    leftThumb1: false
+    leftThumb2: false
+    leftThumb3: false
+    leftThumbTip: false
+    leftWrist: false
+    mainFileName: false
+    participantId: false
+    rightIndex1: false
+    rightIndex2: false
+    rightIndex3: false
+    rightIndexTip: false
+    rightMiddle1: false
+    rightMiddle2: false
+    rightMiddle3: false
+    rightMiddleTip: false
+    rightPinky0: false
+    rightPinky1: false
+    rightPinky2: false
+    rightPinky3: false
+    rightPinkyTip: false
+    rightRing1: false
+    rightRing2: false
+    rightRing3: false
+    rightRingTip: false
+    rightThumb0: false
+    rightThumb1: false
+    rightThumb2: false
+    rightThumb3: false
+    rightThumbTip: false
+    rightWrist: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    -
-      {}
+    - participantId: ""
+      mainFileName: ""
+      head: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftWrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightWrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumb0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumb1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumb2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumb3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumbTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftIndex1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftIndex2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftIndex3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftIndexTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinky0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinky1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinky2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinky3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinkyTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftMiddle1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftMiddle2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftMiddle3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftMiddleTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftRing1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftRing2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftRing3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftRingTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumb0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumb1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumb2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumb3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumbTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightIndex1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightIndex2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightIndex3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightIndexTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinky0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinky1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinky2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinky3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinkyTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightMiddle1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightMiddle2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightMiddle3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightMiddleTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightRing1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightRing2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightRing3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightRingTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - // @input string participantId
+    - // @input string mainFileName
+    - // @input SceneObject head
+    - // @input SceneObject leftWrist
+    - // @input SceneObject rightWrist
+    - // @input SceneObject leftThumb0
+    - // @input SceneObject leftThumb1
+    - // @input SceneObject leftThumb2
+    - // @input SceneObject leftThumb3
+    - // @input SceneObject leftThumbTip
+    - // @input SceneObject leftIndex1
+    - // @input SceneObject leftIndex2
+    - // @input SceneObject leftIndex3
+    - // @input SceneObject leftIndexTip
+    - // @input SceneObject leftPinky0
+    - // @input SceneObject leftPinky1
+    - // @input SceneObject leftPinky2
+    - // @input SceneObject leftPinky3
+    - // @input SceneObject leftPinkyTip
+    - // @input SceneObject leftMiddle1
+    - // @input SceneObject leftMiddle2
+    - // @input SceneObject leftMiddle3
+    - // @input SceneObject leftMiddleTip
+    - // @input SceneObject leftRing1
+    - // @input SceneObject leftRing2
+    - // @input SceneObject leftRing3
+    - // @input SceneObject leftRingTip
+    - // @input SceneObject rightThumb0
+    - // @input SceneObject rightThumb1
+    - // @input SceneObject rightThumb2
+    - // @input SceneObject rightThumb3
+    - // @input SceneObject rightThumbTip
+    - // @input SceneObject rightIndex1
+    - // @input SceneObject rightIndex2
+    - // @input SceneObject rightIndex3
+    - // @input SceneObject rightIndexTip
+    - // @input SceneObject rightPinky0
+    - // @input SceneObject rightPinky1
+    - // @input SceneObject rightPinky2
+    - // @input SceneObject rightPinky3
+    - // @input SceneObject rightPinkyTip
+    - // @input SceneObject rightMiddle1
+    - // @input SceneObject rightMiddle2
+    - // @input SceneObject rightMiddle3
+    - // @input SceneObject rightMiddleTip
+    - // @input SceneObject rightRing1
+    - // @input SceneObject rightRing2
+    - // @input SceneObject rightRing3
+    - // @input SceneObject rightRingTip

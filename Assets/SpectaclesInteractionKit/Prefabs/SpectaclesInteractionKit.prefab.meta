@@ -3324,12 +3324,108 @@
   Enabled: true
   ScriptAsset: !<reference> ad878572-4a1c-471f-b2fc-67d1efadcf59
   ScriptInputsDefault:
-    {}
+    participantId: true
+    mainFileName: true
+    head: true
+    leftWrist: true
+    rightWrist: true
+    leftThumb0: true
+    leftThumb1: true
+    leftThumb2: true
+    leftThumb3: true
+    leftThumbTip: true
+    leftIndex1: true
+    leftIndex2: true
+    leftIndex3: true
+    leftIndexTip: true
+    leftPinky0: true
+    leftPinky1: true
+    leftPinky2: true
+    leftPinky3: true
+    leftPinkyTip: true
+    leftMiddle1: true
+    leftMiddle2: true
+    leftMiddle3: true
+    leftMiddleTip: true
+    leftRing1: true
+    leftRing2: true
+    leftRing3: true
+    leftRingTip: true
+    rightThumb0: true
+    rightThumb1: true
+    rightThumb2: true
+    rightThumb3: true
+    rightThumbTip: true
+    rightIndex1: true
+    rightIndex2: true
+    rightIndex3: true
+    rightIndexTip: true
+    rightPinky0: true
+    rightPinky1: true
+    rightPinky2: true
+    rightPinky3: true
+    rightPinkyTip: true
+    rightMiddle1: true
+    rightMiddle2: true
+    rightMiddle3: true
+    rightMiddleTip: true
+    rightRing1: true
+    rightRing2: true
+    rightRing3: true
+    rightRingTip: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      {}
+      participantId: ""
+      mainFileName: ""
+      head: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftWrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightWrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumb0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumb1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumb2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumb3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftThumbTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftIndex1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftIndex2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftIndex3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftIndexTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinky0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinky1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinky2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinky3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftPinkyTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftMiddle1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftMiddle2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftMiddle3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftMiddleTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftRing1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftRing2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftRing3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      leftRingTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumb0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumb1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumb2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumb3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightThumbTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightIndex1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightIndex2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightIndex3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightIndexTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinky0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinky1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinky2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinky3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightPinkyTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightMiddle1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightMiddle2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightMiddle3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightMiddleTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightRing1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightRing2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightRing3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightRingTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
