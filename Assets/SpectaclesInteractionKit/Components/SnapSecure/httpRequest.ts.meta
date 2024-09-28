@@ -1,0 +1,39 @@
+- !<AssetImportMetadata/f0c6f627-3ce0-4eef-8d89-fbb2d6f20f0a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 105e794b-a9e8-4c89-96b8-8352874304ef
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 105e794b-a9e8-4c89-96b8-8352874304ef
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 40ecb53e-8f75-40a9-9b4b-df5a8bca73cf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/8edb7afe-1bfb-47ba-998e-a32d72656217>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/40ecb53e-8f75-40a9-9b4b-df5a8bca73cf>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    rsm: false
+    textToSend: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - rsm: !<reference.RemoteServiceModule> 00000000-0000-0000-0000-000000000000
+      textToSend: ""
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.RemoteServiceModule rsm
+    - // @input string textToSend
