@@ -28,48 +28,38 @@
     leftIndex1: false
     leftIndex2: false
     leftIndex3: false
-    leftIndexTip: false
     leftMiddle1: false
     leftMiddle2: false
     leftMiddle3: false
-    leftMiddleTip: false
     leftPinky0: false
     leftPinky1: false
     leftPinky2: false
     leftPinky3: false
-    leftPinkyTip: false
     leftRing1: false
     leftRing2: false
     leftRing3: false
-    leftRingTip: false
     leftThumb0: false
     leftThumb1: false
     leftThumb2: false
     leftThumb3: false
-    leftThumbTip: false
     leftWrist: false
     rightIndex1: false
     rightIndex2: false
     rightIndex3: false
-    rightIndexTip: false
     rightMiddle1: false
     rightMiddle2: false
     rightMiddle3: false
-    rightMiddleTip: false
     rightPinky0: false
     rightPinky1: false
     rightPinky2: false
     rightPinky3: false
-    rightPinkyTip: false
     rightRing1: false
     rightRing2: false
     rightRing3: false
-    rightRingTip: false
     rightThumb0: false
     rightThumb1: false
     rightThumb2: false
     rightThumb3: false
-    rightThumbTip: false
     rightWrist: false
     sampleRateHz: false
   ScriptTypesHidden:

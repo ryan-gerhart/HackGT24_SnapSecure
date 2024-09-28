@@ -1,5 +1,7 @@
 PinnedEntities:
   type: "std::vector<class Es::Uuid,class std::allocator<class Es::Uuid> >"
   value:
-    size: 0
+    size: 1
+    values:
+      - fe3c9299-0ea4-42c8-bc70-34186bc59952
   options: 4
