@@ -181,7 +181,7 @@
     []
   Name: Text
   Enabled: true
-  RenderOrder: 10
+  RenderOrder: 1
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -1108,59 +1108,6 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/2804994f-bf81-4b71-ad18-a68161dfc714>
-  PrefabRemaps:
-    []
-  Name: dataCollect
-  Enabled: false
-  ScriptAsset: !<reference> fb8e5467-b20c-41b4-830f-0ea91e2231bc
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      head: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      leftWrist: !<reference.SceneObject> 9cedc16a-c9e5-4a68-864c-3a6193939290
-      rightWrist: !<reference.SceneObject> 6c82bb54-cde7-40cc-b09a-ae0407d4a7e4
-      leftThumb0: !<reference.SceneObject> c0fbe2e8-b696-42bd-aa0d-28c8c92aca11
-      leftThumb1: !<reference.SceneObject> bb442796-5475-4695-9191-7b4a8924ddf6
-      leftThumb2: !<reference.SceneObject> e1e61e4a-f61f-4b8e-9778-77240c5d03b4
-      leftThumb3: !<reference.SceneObject> 49bc520e-979b-41dd-af92-c39d30a5a1c3
-      leftIndex1: !<reference.SceneObject> 82686826-4088-45dd-a8f0-03683796ce78
-      leftIndex2: !<reference.SceneObject> e61d4d85-a08b-4b79-8a78-bd11a94171f2
-      leftIndex3: !<reference.SceneObject> 45c0ee0b-4eae-4c81-8af1-44947508de3f
-      leftMiddle1: !<reference.SceneObject> 37a62259-1ce7-4744-b6ea-dc2c55f35328
-      leftMiddle2: !<reference.SceneObject> 254b9e85-b5d1-400f-8c84-83dd52f95100
-      leftMiddle3: !<reference.SceneObject> 6796d74c-36de-4973-b60f-26723675de0e
-      leftRing1: !<reference.SceneObject> bc7ca399-42d5-43ce-8b46-6e31b628daf7
-      leftRing2: !<reference.SceneObject> 7c03fc5d-a618-491d-815e-9698ccc95eb8
-      leftRing3: !<reference.SceneObject> 95af3b28-6f17-49e5-80c3-e8a9c88ee332
-      leftPinky0: !<reference.SceneObject> a7e3803f-d6eb-43f5-a3ba-c5146b5dd058
-      leftPinky1: !<reference.SceneObject> c6ca57a4-4187-47c4-9817-27f2853e83c5
-      leftPinky2: !<reference.SceneObject> 49316d12-58fb-4a4a-b09c-cc6a9303dbe6
-      leftPinky3: !<reference.SceneObject> fa8a056a-2062-4c94-a29d-dedf42c65e7d
-      rightThumb0: !<reference.SceneObject> 24bab02f-73f1-439d-bb0c-0559574f0782
-      rightThumb1: !<reference.SceneObject> dc97552e-2a04-4019-8979-482f91a5824f
-      rightThumb2: !<reference.SceneObject> fc8e7153-7b17-491b-9c4b-1a7d19a6e707
-      rightThumb3: !<reference.SceneObject> b50d0664-596f-4bd5-9d00-f8f4d7e27a90
-      rightIndex1: !<reference.SceneObject> a5dcc3e5-e051-4ad2-9f3c-361dc8e16680
-      rightIndex2: !<reference.SceneObject> b9d14d3a-7945-428c-a768-41692c2eba14
-      rightIndex3: !<reference.SceneObject> 88a2a29b-d368-412c-9f01-3bd535c31027
-      rightMiddle1: !<reference.SceneObject> 001d8b74-6a85-4cdd-b231-fd1bdfc8e8d0
-      rightMiddle2: !<reference.SceneObject> 3f9892ea-ded0-4c59-ac79-5f72c2580b41
-      rightMiddle3: !<reference.SceneObject> 146c3d55-6548-4c7f-a4a4-22f402575f4f
-      rightRing1: !<reference.SceneObject> e5f5a9b5-8c25-4543-8704-b054151e7f27
-      rightRing2: !<reference.SceneObject> 7b545c21-569f-42ee-a8bc-6788a927d730
-      rightRing3: !<reference.SceneObject> 44d3ae72-34ce-490d-97d1-811ee37f1a40
-      rightPinky0: !<reference.SceneObject> a53b5990-7f09-4804-a3ac-d5306340a40d
-      rightPinky1: !<reference.SceneObject> 6a3dbaa3-d10c-4f71-840d-2b8b8184b67c
-      rightPinky2: !<reference.SceneObject> 3b2ad7c8-6228-4421-aad9-65db4e6860b7
-      rightPinky3: !<reference.SceneObject> fa0dcbdf-ddc9-4890-90e2-d81f925fe239
-      sampleRateHz: !<float> 30.000000
-  ScriptTypes:
-    "":
-      {}
 - !<RenderMeshVisual/28b7e9f5-3c51-4888-a495-85c62f6ced1d>
   PrefabRemaps:
     []
@@ -1723,6 +1670,22 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/38525480-1d52-4d2d-92ca-85b058c4fbe1>
+  PrefabRemaps:
+    []
+  Name: startDataCollect
+  Enabled: true
+  ScriptAsset: !<reference> 64f97ab0-bcc1-4458-87c3-a59f9b0672a6
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      dataCollector: !<MappingBased.dataCollect> c9755fe3-ed73-492b-8463-8a29567f1d22
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/3a3fe018-7d5d-4ce2-8a13-411b9a6b2d0d>
   PrefabRemaps:
     []
@@ -4758,7 +4721,6 @@
   Children:
     []
   Components:
-    - !<own> 2804994f-bf81-4b71-ad18-a68161dfc714
     - !<own> c9755fe3-ed73-492b-8463-8a29567f1d22
 - !<SceneObject/9cedc16a-c9e5-4a68-864c-3a6193939290>
   PrefabRemaps:
@@ -4855,7 +4817,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 7
+  RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -4863,7 +4825,8 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> c202ee17-bf6f-4e5a-bbdb-7b35afe081db
+    - !<reference> 5e6e1132-90fd-4c58-86f9-eb992e6747f5
+    - !<reference> 00000000-0000-0000-0000-000000000000
   Mesh: !<reference> 9d7384d9-0215-4f75-8b03-f44096507d85
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
@@ -6084,6 +6047,7 @@
     - !<own> e13d92b0-1976-4ded-8ed5-9a00eade755e
     - !<own> a89c0f53-69d0-43ec-88e5-2e31cf9dfb02
     - !<own> efa285de-dae3-4509-b566-778175703bf4
+    - !<own> 38525480-1d52-4d2d-92ca-85b058c4fbe1
 - !<SceneObject/bac015f5-7ee8-4f28-b1ef-d8a756834ca4>
   PrefabRemaps:
     []
@@ -6511,7 +6475,7 @@
   Enabled: true
   ScriptAsset: !<reference> ad878572-4a1c-471f-b2fc-67d1efadcf59
   ScriptInputsDefault:
-    http: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -6564,7 +6528,7 @@
       rightRing2: !<reference.SceneObject> 7b545c21-569f-42ee-a8bc-6788a927d730
       rightRing3: !<reference.SceneObject> 44d3ae72-34ce-490d-97d1-811ee37f1a40
       rightRingTip: !<reference.SceneObject> 43d0e3f6-94eb-4ee1-a4b3-12cc32c39486
-      http: !<MappingBased.httpRequest> 00000000-0000-0000-0000-000000000000
+      http: !<MappingBased.httpRequest> 637aaf6a-5aaa-456c-a50f-80364fd66add
   ScriptTypes:
     "":
       {}
@@ -7602,7 +7566,7 @@
   ScriptInputs:
     "":
       targetOutlineMaterial: !<reference.Material> 7231c7bc-6c14-4331-ad23-9ab928107707
-      hoveringColor: !<Vec4> {x: 0.000000, y: 0.298039, z: 1.000000, w: 1.000000}
+      hoveringColor: !<Vec4> {x: 0.000000, y: 0.345098, z: 0.172549, w: 1.000000}
       activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       outlineWeight: -0.250000
       meshVisuals: !<reference.RenderMeshVisual[]>
@@ -7754,16 +7718,15 @@
   Enabled: true
   ScriptAsset: !<reference> ad94751b-0846-4ee3-af41-7b0eb49b2e2c
   ScriptInputsDefault:
-    hoverColor: true
-    disabledColor: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       defaultColor: !<Vec4> {x: 0.000000, y: 0.278431, z: 0.047059, w: 1.000000}
-      hoverColor: !<Vec4> {x: 0.280000, y: 0.280000, z: 0.280000, w: 1.000000}
+      hoverColor: !<Vec4> {x: 0.278431, y: 0.278431, z: 0.278431, w: 1.000000}
       pinchedColor: !<Vec4> {x: 0.188235, y: 0.596078, z: 0.000000, w: 1.000000}
-      disabledColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.000000}
+      disabledColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       meshVisuals: !<reference.RenderMeshVisual[]>
         - !<reference> 9ee20fbc-ebf6-4b53-b262-09e8435f5c8b
   ScriptTypes:

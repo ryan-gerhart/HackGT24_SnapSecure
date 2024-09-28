@@ -1,0 +1,42 @@
+- !<AssetImportMetadata/a59410e5-f8a3-4ce2-8213-5de9960c06a7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 12df0370-6f68-4221-99b5-ec9ccfb13db0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 12df0370-6f68-4221-99b5-ec9ccfb13db0
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 83104dc7-630e-4e38-9eda-1d566e6c87d5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/6be2fcbf-13d2-4e2c-bd60-d813d7b5feb3>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/83104dc7-630e-4e38-9eda-1d566e6c87d5>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    Video2: false
+    Video3: false
+    VideoChosen: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - Video2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      Video3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      VideoChosen: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject VideoChosen
+    - // @input SceneObject Video2
+    - // @input SceneObject Video3
