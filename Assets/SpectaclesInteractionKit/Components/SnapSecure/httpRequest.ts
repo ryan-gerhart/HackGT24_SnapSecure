@@ -37,6 +37,7 @@ export class HttpRequest extends BaseScriptComponent {
     request.url = apiUrl;
     request.method = RemoteServiceHttpRequest.HttpRequestMethod.Post;
     request.body = this.jsonToSend; // Create JSON payload
+    print(request.body);
     request.setHeader("Content-Type", "application/json"); // Set content type to JSON
 
     // Handle response and errors

@@ -147,234 +147,119 @@ export class DataCollector extends BaseScriptComponent {
     public save(): void {
            this.saveMotionDataToJson();
     }
- 
-//    private recordMotionData() {
-//        print('creating json');
-//        while (this.isRecording) {
-//            this.motionData.headHandsMotionRecordList.push(new HeadHandsMotionRecord({
-//                id: this.participantId,
-//                timeStamp: getCurrentTime() - this.startTime,
-//                headPosition: this.head.getTransform().getLocalPosition(),
-//                headRotation: this.head.getTransform().getLocalRotation(),
-//
-//                leftWristPosition: this.leftWrist.getTransform().getLocalPosition(),
-//                leftWristRotation: this.leftWrist.getTransform().getLocalRotation(),
-//
-//                leftThumb0Position: this.leftThumb0.getTransform().getLocalPosition(),
-//                leftThumb0Rotation: this.leftThumb0.getTransform().getLocalRotation(),
-//                leftThumb1Position: this.leftThumb1.getTransform().getLocalPosition(),
-//                leftThumb1Rotation: this.leftThumb1.getTransform().getLocalRotation(),
-//                leftThumb2Position: this.leftThumb2.getTransform().getLocalPosition(),
-//                leftThumb2Rotation: this.leftThumb2.getTransform().getLocalRotation(),
-//                leftThumb3Position: this.leftThumb3.getTransform().getLocalPosition(),
-//                leftThumb3Rotation: this.leftThumb3.getTransform().getLocalRotation(),
-//                leftThumbTipPosition: this.leftThumbTip.getTransform().getLocalPosition(),
-//                leftThumbTipRotation: this.leftThumbTip.getTransform().getLocalRotation(),
-//
-//                leftIndex1Position: this.leftIndex1.getTransform().getLocalPosition(),
-//                leftIndex1Rotation: this.leftIndex1.getTransform().getLocalRotation(),
-//                leftIndex2Position: this.leftIndex2.getTransform().getLocalPosition(),
-//                leftIndex2Rotation: this.leftIndex2.getTransform().getLocalRotation(),
-//                leftIndex3Position: this.leftIndex3.getTransform().getLocalPosition(),
-//                leftIndex3Rotation: this.leftIndex3.getTransform().getLocalRotation(),
-//                leftIndexTipPosition: this.leftIndexTip.getTransform().getLocalPosition(),
-//                leftIndexTipRotation: this.leftIndexTip.getTransform().getLocalRotation(),
-//
-//                leftPinky0Position: this.leftPinky0.getTransform().getLocalPosition(),
-//                leftPinky0Rotation: this.leftPinky0.getTransform().getLocalRotation(),
-//                leftPinky1Position: this.leftPinky1.getTransform().getLocalPosition(),
-//                leftPinky1Rotation: this.leftPinky1.getTransform().getLocalRotation(),
-//                leftPinky2Position: this.leftPinky2.getTransform().getLocalPosition(),
-//                leftPinky2Rotation: this.leftPinky2.getTransform().getLocalRotation(),
-//                leftPinky3Position: this.leftPinky3.getTransform().getLocalPosition(),
-//                leftPinky3Rotation: this.leftPinky3.getTransform().getLocalRotation(),
-//                leftPinkyTipPosition: this.leftPinkyTip.getTransform().getLocalPosition(),
-//                leftPinkyTipRotation: this.leftPinkyTip.getTransform().getLocalRotation(),
-//
-//                leftMiddle1Position: this.leftMiddle1.getTransform().getLocalPosition(),
-//                leftMiddle1Rotation: this.leftMiddle1.getTransform().getLocalRotation(),
-//                leftMiddle2Position: this.leftMiddle2.getTransform().getLocalPosition(),
-//                leftMiddle2Rotation: this.leftMiddle2.getTransform().getLocalRotation(),
-//                leftMiddle3Position: this.leftMiddle3.getTransform().getLocalPosition(),
-//                leftMiddle3Rotation: this.leftMiddle3.getTransform().getLocalRotation(),
-//                leftMiddleTipPosition: this.leftMiddleTip.getTransform().getLocalPosition(),
-//                leftMiddleTipRotation: this.leftMiddleTip.getTransform().getLocalRotation(),
-//
-//                leftRing1Position: this.leftRing1.getTransform().getLocalPosition(),
-//                leftRing1Rotation: this.leftRing1.getTransform().getLocalRotation(),
-//                leftRing2Position: this.leftRing2.getTransform().getLocalPosition(),
-//                leftRing2Rotation: this.leftRing2.getTransform().getLocalRotation(),
-//                leftRing3Position: this.leftRing3.getTransform().getLocalPosition(),
-//                leftRing3Rotation: this.leftRing3.getTransform().getLocalRotation(),
-//                leftRingTipPosition: this.leftRingTip.getTransform().getLocalPosition(),
-//                leftRingTipRotation: this.leftRingTip.getTransform().getLocalRotation(),
-//
-//                rightWristPosition: this.rightWrist.getTransform().getLocalPosition(),
-//                rightWristRotation: this.rightWrist.getTransform().getLocalRotation(),
-//
-//                rightThumb0Position: this.rightThumb0.getTransform().getLocalPosition(),
-//                rightThumb0Rotation: this.rightThumb0.getTransform().getLocalRotation(),
-//                rightThumb1Position: this.rightThumb1.getTransform().getLocalPosition(),
-//                rightThumb1Rotation: this.rightThumb1.getTransform().getLocalRotation(),
-//                rightThumb2Position: this.rightThumb2.getTransform().getLocalPosition(),
-//                rightThumb2Rotation: this.rightThumb2.getTransform().getLocalRotation(),
-//                rightThumb3Position: this.rightThumb3.getTransform().getLocalPosition(),
-//                rightThumb3Rotation: this.rightThumb3.getTransform().getLocalRotation(),
-//                rightThumbTipPosition: this.rightThumbTip.getTransform().getLocalPosition(),
-//                rightThumbTipRotation: this.rightThumbTip.getTransform().getLocalRotation(),
-//
-//                rightIndex1Position: this.rightIndex1.getTransform().getLocalPosition(),
-//                rightIndex1Rotation: this.rightIndex1.getTransform().getLocalRotation(),
-//                rightIndex2Position: this.rightIndex2.getTransform().getLocalPosition(),
-//                rightIndex2Rotation: this.rightIndex2.getTransform().getLocalRotation(),
-//                rightIndex3Position: this.rightIndex3.getTransform().getLocalPosition(),
-//                rightIndex3Rotation: this.rightIndex3.getTransform().getLocalRotation(),
-//                rightIndexTipPosition: this.rightIndexTip.getTransform().getLocalPosition(),
-//                rightIndexTipRotation: this.rightIndexTip.getTransform().getLocalRotation(),
-//
-//                rightPinky0Position: this.rightPinky0.getTransform().getLocalPosition(),
-//                rightPinky0Rotation: this.rightPinky0.getTransform().getLocalRotation(),
-//                rightPinky1Position: this.rightPinky1.getTransform().getLocalPosition(),
-//                rightPinky1Rotation: this.rightPinky1.getTransform().getLocalRotation(),
-//                rightPinky2Position: this.rightPinky2.getTransform().getLocalPosition(),
-//                rightPinky2Rotation: this.rightPinky2.getTransform().getLocalRotation(),
-//                rightPinky3Position: this.rightPinky3.getTransform().getLocalPosition(),
-//                rightPinky3Rotation: this.rightPinky3.getTransform().getLocalRotation(),
-//                rightPinkyTipPosition: this.rightPinkyTip.getTransform().getLocalPosition(),
-//                rightPinkyTipRotation: this.rightPinkyTip.getTransform().getLocalRotation(),
-//
-//                rightMiddle1Position: this.rightMiddle1.getTransform().getLocalPosition(),
-//                rightMiddle1Rotation: this.rightMiddle1.getTransform().getLocalRotation(),
-//                rightMiddle2Position: this.rightMiddle2.getTransform().getLocalPosition(),
-//                rightMiddle2Rotation: this.rightMiddle2.getTransform().getLocalRotation(),
-//                rightMiddle3Position: this.rightMiddle3.getTransform().getLocalPosition(),
-//                rightMiddle3Rotation: this.rightMiddle3.getTransform().getLocalRotation(),
-//                rightMiddleTipPosition: this.rightMiddleTip.getTransform().getLocalPosition(),
-//                rightMiddleTipRotation: this.rightMiddleTip.getTransform().getLocalRotation(),
-//
-//                rightRing1Position: this.rightRing1.getTransform().getLocalPosition(),
-//                rightRing1Rotation: this.rightRing1.getTransform().getLocalRotation(),
-//                rightRing2Position: this.rightRing2.getTransform().getLocalPosition(),
-//                rightRing2Rotation: this.rightRing2.getTransform().getLocalRotation(),
-//                rightRing3Position: this.rightRing3.getTransform().getLocalPosition(),
-//                rightRing3Rotation: this.rightRing3.getTransform().getLocalRotation(),
-//                rightRingTipPosition: this.rightRingTip.getTransform().getLocalPosition(),
-//                rightRingTipRotation: this.rightRingTip.getTransform().getLocalRotation(),
-//            }));
-//        }
-//    }
+
 
         private recordMotionData() {
         print('creating json');
             this.motionData.headHandsMotionRecordList.push(new HeadHandsMotionRecord({
                 id: this.participantId,
                 timeStamp: getCurrentTime() - this.startTime,
-                headPosition: this.head.getTransform().getLocalPosition(),
-                headRotation: this.head.getTransform().getLocalRotation(),
+                headPosition: this.head.getTransform().getLocalPosition().toString().toString(),
+                headRotation: this.head.getTransform().getLocalPosition().toString().toString(),
 
-                leftWristPosition: this.leftWrist.getTransform().getLocalPosition(),
-                leftWristRotation: this.leftWrist.getTransform().getLocalRotation(),
+                leftWristPosition: this.leftWrist.getTransform().getLocalPosition().toString().toString(),
+                leftWristRotation: this.leftWrist.getTransform().getLocalPosition().toString().toString(),
 
-                leftThumb0Position: this.leftThumb0.getTransform().getLocalPosition(),
-                leftThumb0Rotation: this.leftThumb0.getTransform().getLocalRotation(),
-                leftThumb1Position: this.leftThumb1.getTransform().getLocalPosition(),
-                leftThumb1Rotation: this.leftThumb1.getTransform().getLocalRotation(),
-                leftThumb2Position: this.leftThumb2.getTransform().getLocalPosition(),
-                leftThumb2Rotation: this.leftThumb2.getTransform().getLocalRotation(),
-                leftThumb3Position: this.leftThumb3.getTransform().getLocalPosition(),
-                leftThumb3Rotation: this.leftThumb3.getTransform().getLocalRotation(),
-                leftThumbTipPosition: this.leftThumbTip.getTransform().getLocalPosition(),
-                leftThumbTipRotation: this.leftThumbTip.getTransform().getLocalRotation(),
+                leftThumb0Position: this.leftThumb0.getTransform().getLocalPosition().toString(),
+                leftThumb0Rotation: this.leftThumb0.getTransform().getLocalPosition().toString(),
+                leftThumb1Position: this.leftThumb1.getTransform().getLocalPosition().toString(),
+                leftThumb1Rotation: this.leftThumb1.getTransform().getLocalPosition().toString(),
+                leftThumb2Position: this.leftThumb2.getTransform().getLocalPosition().toString(),
+                leftThumb2Rotation: this.leftThumb2.getTransform().getLocalPosition().toString(),
+                leftThumb3Position: this.leftThumb3.getTransform().getLocalPosition().toString(),
+                leftThumb3Rotation: this.leftThumb3.getTransform().getLocalPosition().toString(),
+                leftThumbTipPosition: this.leftThumbTip.getTransform().getLocalPosition().toString(),
+                leftThumbTipRotation: this.leftThumbTip.getTransform().getLocalPosition().toString(),
 
-                leftIndex1Position: this.leftIndex1.getTransform().getLocalPosition(),
-                leftIndex1Rotation: this.leftIndex1.getTransform().getLocalRotation(),
-                leftIndex2Position: this.leftIndex2.getTransform().getLocalPosition(),
-                leftIndex2Rotation: this.leftIndex2.getTransform().getLocalRotation(),
-                leftIndex3Position: this.leftIndex3.getTransform().getLocalPosition(),
-                leftIndex3Rotation: this.leftIndex3.getTransform().getLocalRotation(),
-                leftIndexTipPosition: this.leftIndexTip.getTransform().getLocalPosition(),
-                leftIndexTipRotation: this.leftIndexTip.getTransform().getLocalRotation(),
+                leftIndex1Position: this.leftIndex1.getTransform().getLocalPosition().toString(),
+                leftIndex1Rotation: this.leftIndex1.getTransform().getLocalPosition().toString(),
+                leftIndex2Position: this.leftIndex2.getTransform().getLocalPosition().toString(),
+                leftIndex2Rotation: this.leftIndex2.getTransform().getLocalPosition().toString(),
+                leftIndex3Position: this.leftIndex3.getTransform().getLocalPosition().toString(),
+                leftIndex3Rotation: this.leftIndex3.getTransform().getLocalPosition().toString(),
+                leftIndexTipPosition: this.leftIndexTip.getTransform().getLocalPosition().toString(),
+                leftIndexTipRotation: this.leftIndexTip.getTransform().getLocalPosition().toString(),
 
-                leftPinky0Position: this.leftPinky0.getTransform().getLocalPosition(),
-                leftPinky0Rotation: this.leftPinky0.getTransform().getLocalRotation(),
-                leftPinky1Position: this.leftPinky1.getTransform().getLocalPosition(),
-                leftPinky1Rotation: this.leftPinky1.getTransform().getLocalRotation(),
-                leftPinky2Position: this.leftPinky2.getTransform().getLocalPosition(),
-                leftPinky2Rotation: this.leftPinky2.getTransform().getLocalRotation(),
-                leftPinky3Position: this.leftPinky3.getTransform().getLocalPosition(),
-                leftPinky3Rotation: this.leftPinky3.getTransform().getLocalRotation(),
-                leftPinkyTipPosition: this.leftPinkyTip.getTransform().getLocalPosition(),
-                leftPinkyTipRotation: this.leftPinkyTip.getTransform().getLocalRotation(),
+                leftPinky0Position: this.leftPinky0.getTransform().getLocalPosition().toString(),
+                leftPinky0Rotation: this.leftPinky0.getTransform().getLocalPosition().toString(),
+                leftPinky1Position: this.leftPinky1.getTransform().getLocalPosition().toString(),
+                leftPinky1Rotation: this.leftPinky1.getTransform().getLocalPosition().toString(),
+                leftPinky2Position: this.leftPinky2.getTransform().getLocalPosition().toString(),
+                leftPinky2Rotation: this.leftPinky2.getTransform().getLocalPosition().toString(),
+                leftPinky3Position: this.leftPinky3.getTransform().getLocalPosition().toString(),
+                leftPinky3Rotation: this.leftPinky3.getTransform().getLocalPosition().toString(),
+                leftPinkyTipPosition: this.leftPinkyTip.getTransform().getLocalPosition().toString(),
+                leftPinkyTipRotation: this.leftPinkyTip.getTransform().getLocalPosition().toString(),
 
-                leftMiddle1Position: this.leftMiddle1.getTransform().getLocalPosition(),
-                leftMiddle1Rotation: this.leftMiddle1.getTransform().getLocalRotation(),
-                leftMiddle2Position: this.leftMiddle2.getTransform().getLocalPosition(),
-                leftMiddle2Rotation: this.leftMiddle2.getTransform().getLocalRotation(),
-                leftMiddle3Position: this.leftMiddle3.getTransform().getLocalPosition(),
-                leftMiddle3Rotation: this.leftMiddle3.getTransform().getLocalRotation(),
-                leftMiddleTipPosition: this.leftMiddleTip.getTransform().getLocalPosition(),
-                leftMiddleTipRotation: this.leftMiddleTip.getTransform().getLocalRotation(),
+                leftMiddle1Position: this.leftMiddle1.getTransform().getLocalPosition().toString(),
+                leftMiddle1Rotation: this.leftMiddle1.getTransform().getLocalPosition().toString(),
+                leftMiddle2Position: this.leftMiddle2.getTransform().getLocalPosition().toString(),
+                leftMiddle2Rotation: this.leftMiddle2.getTransform().getLocalPosition().toString(),
+                leftMiddle3Position: this.leftMiddle3.getTransform().getLocalPosition().toString(),
+                leftMiddle3Rotation: this.leftMiddle3.getTransform().getLocalPosition().toString(),
+                leftMiddleTipPosition: this.leftMiddleTip.getTransform().getLocalPosition().toString(),
+                leftMiddleTipRotation: this.leftMiddleTip.getTransform().getLocalPosition().toString(),
 
-                leftRing1Position: this.leftRing1.getTransform().getLocalPosition(),
-                leftRing1Rotation: this.leftRing1.getTransform().getLocalRotation(),
-                leftRing2Position: this.leftRing2.getTransform().getLocalPosition(),
-                leftRing2Rotation: this.leftRing2.getTransform().getLocalRotation(),
-                leftRing3Position: this.leftRing3.getTransform().getLocalPosition(),
-                leftRing3Rotation: this.leftRing3.getTransform().getLocalRotation(),
-                leftRingTipPosition: this.leftRingTip.getTransform().getLocalPosition(),
-                leftRingTipRotation: this.leftRingTip.getTransform().getLocalRotation(),
+                leftRing1Position: this.leftRing1.getTransform().getLocalPosition().toString(),
+                leftRing1Rotation: this.leftRing1.getTransform().getLocalPosition().toString(),
+                leftRing2Position: this.leftRing2.getTransform().getLocalPosition().toString(),
+                leftRing2Rotation: this.leftRing2.getTransform().getLocalPosition().toString(),
+                leftRing3Position: this.leftRing3.getTransform().getLocalPosition().toString(),
+                leftRing3Rotation: this.leftRing3.getTransform().getLocalPosition().toString(),
+                leftRingTipPosition: this.leftRingTip.getTransform().getLocalPosition().toString(),
+                leftRingTipRotation: this.leftRingTip.getTransform().getLocalPosition().toString(),
 
-                rightWristPosition: this.rightWrist.getTransform().getLocalPosition(),
-                rightWristRotation: this.rightWrist.getTransform().getLocalRotation(),
+                rightWristPosition: this.rightWrist.getTransform().getLocalPosition().toString(),
+                rightWristRotation: this.rightWrist.getTransform().getLocalPosition().toString(),
 
-                rightThumb0Position: this.rightThumb0.getTransform().getLocalPosition(),
-                rightThumb0Rotation: this.rightThumb0.getTransform().getLocalRotation(),
-                rightThumb1Position: this.rightThumb1.getTransform().getLocalPosition(),
-                rightThumb1Rotation: this.rightThumb1.getTransform().getLocalRotation(),
-                rightThumb2Position: this.rightThumb2.getTransform().getLocalPosition(),
-                rightThumb2Rotation: this.rightThumb2.getTransform().getLocalRotation(),
-                rightThumb3Position: this.rightThumb3.getTransform().getLocalPosition(),
-                rightThumb3Rotation: this.rightThumb3.getTransform().getLocalRotation(),
-                rightThumbTipPosition: this.rightThumbTip.getTransform().getLocalPosition(),
-                rightThumbTipRotation: this.rightThumbTip.getTransform().getLocalRotation(),
+                rightThumb0Position: this.rightThumb0.getTransform().getLocalPosition().toString(),
+                rightThumb0Rotation: this.rightThumb0.getTransform().getLocalPosition().toString(),
+                rightThumb1Position: this.rightThumb1.getTransform().getLocalPosition().toString(),
+                rightThumb1Rotation: this.rightThumb1.getTransform().getLocalPosition().toString(),
+                rightThumb2Position: this.rightThumb2.getTransform().getLocalPosition().toString(),
+                rightThumb2Rotation: this.rightThumb2.getTransform().getLocalPosition().toString(),
+                rightThumb3Position: this.rightThumb3.getTransform().getLocalPosition().toString(),
+                rightThumb3Rotation: this.rightThumb3.getTransform().getLocalPosition().toString(),
+                rightThumbTipPosition: this.rightThumbTip.getTransform().getLocalPosition().toString(),
+                rightThumbTipRotation: this.rightThumbTip.getTransform().getLocalPosition().toString(),
 
-                rightIndex1Position: this.rightIndex1.getTransform().getLocalPosition(),
-                rightIndex1Rotation: this.rightIndex1.getTransform().getLocalRotation(),
-                rightIndex2Position: this.rightIndex2.getTransform().getLocalPosition(),
-                rightIndex2Rotation: this.rightIndex2.getTransform().getLocalRotation(),
-                rightIndex3Position: this.rightIndex3.getTransform().getLocalPosition(),
-                rightIndex3Rotation: this.rightIndex3.getTransform().getLocalRotation(),
-                rightIndexTipPosition: this.rightIndexTip.getTransform().getLocalPosition(),
-                rightIndexTipRotation: this.rightIndexTip.getTransform().getLocalRotation(),
+                rightIndex1Position: this.rightIndex1.getTransform().getLocalPosition().toString(),
+                rightIndex1Rotation: this.rightIndex1.getTransform().getLocalPosition().toString(),
+                rightIndex2Position: this.rightIndex2.getTransform().getLocalPosition().toString(),
+                rightIndex2Rotation: this.rightIndex2.getTransform().getLocalPosition().toString(),
+                rightIndex3Position: this.rightIndex3.getTransform().getLocalPosition().toString(),
+                rightIndex3Rotation: this.rightIndex3.getTransform().getLocalPosition().toString(),
+                rightIndexTipPosition: this.rightIndexTip.getTransform().getLocalPosition().toString(),
+                rightIndexTipRotation: this.rightIndexTip.getTransform().getLocalPosition().toString(),
 
-                rightPinky0Position: this.rightPinky0.getTransform().getLocalPosition(),
-                rightPinky0Rotation: this.rightPinky0.getTransform().getLocalRotation(),
-                rightPinky1Position: this.rightPinky1.getTransform().getLocalPosition(),
-                rightPinky1Rotation: this.rightPinky1.getTransform().getLocalRotation(),
-                rightPinky2Position: this.rightPinky2.getTransform().getLocalPosition(),
-                rightPinky2Rotation: this.rightPinky2.getTransform().getLocalRotation(),
-                rightPinky3Position: this.rightPinky3.getTransform().getLocalPosition(),
-                rightPinky3Rotation: this.rightPinky3.getTransform().getLocalRotation(),
-                rightPinkyTipPosition: this.rightPinkyTip.getTransform().getLocalPosition(),
-                rightPinkyTipRotation: this.rightPinkyTip.getTransform().getLocalRotation(),
+                rightPinky0Position: this.rightPinky0.getTransform().getLocalPosition().toString(),
+                rightPinky0Rotation: this.rightPinky0.getTransform().getLocalPosition().toString(),
+                rightPinky1Position: this.rightPinky1.getTransform().getLocalPosition().toString(),
+                rightPinky1Rotation: this.rightPinky1.getTransform().getLocalPosition().toString(),
+                rightPinky2Position: this.rightPinky2.getTransform().getLocalPosition().toString(),
+                rightPinky2Rotation: this.rightPinky2.getTransform().getLocalPosition().toString(),
+                rightPinky3Position: this.rightPinky3.getTransform().getLocalPosition().toString(),
+                rightPinky3Rotation: this.rightPinky3.getTransform().getLocalPosition().toString(),
+                rightPinkyTipPosition: this.rightPinkyTip.getTransform().getLocalPosition().toString(),
+                rightPinkyTipRotation: this.rightPinkyTip.getTransform().getLocalPosition().toString(),
 
-                rightMiddle1Position: this.rightMiddle1.getTransform().getLocalPosition(),
-                rightMiddle1Rotation: this.rightMiddle1.getTransform().getLocalRotation(),
-                rightMiddle2Position: this.rightMiddle2.getTransform().getLocalPosition(),
-                rightMiddle2Rotation: this.rightMiddle2.getTransform().getLocalRotation(),
-                rightMiddle3Position: this.rightMiddle3.getTransform().getLocalPosition(),
-                rightMiddle3Rotation: this.rightMiddle3.getTransform().getLocalRotation(),
-                rightMiddleTipPosition: this.rightMiddleTip.getTransform().getLocalPosition(),
-                rightMiddleTipRotation: this.rightMiddleTip.getTransform().getLocalRotation(),
+                rightMiddle1Position: this.rightMiddle1.getTransform().getLocalPosition().toString(),
+                rightMiddle1Rotation: this.rightMiddle1.getTransform().getLocalPosition().toString(),
+                rightMiddle2Position: this.rightMiddle2.getTransform().getLocalPosition().toString(),
+                rightMiddle2Rotation: this.rightMiddle2.getTransform().getLocalPosition().toString(),
+                rightMiddle3Position: this.rightMiddle3.getTransform().getLocalPosition().toString(),
+                rightMiddle3Rotation: this.rightMiddle3.getTransform().getLocalPosition().toString(),
+                rightMiddleTipPosition: this.rightMiddleTip.getTransform().getLocalPosition().toString(),
+                rightMiddleTipRotation: this.rightMiddleTip.getTransform().getLocalPosition().toString(),
 
-                rightRing1Position: this.rightRing1.getTransform().getLocalPosition(),
-                rightRing1Rotation: this.rightRing1.getTransform().getLocalRotation(),
-                rightRing2Position: this.rightRing2.getTransform().getLocalPosition(),
-                rightRing2Rotation: this.rightRing2.getTransform().getLocalRotation(),
-                rightRing3Position: this.rightRing3.getTransform().getLocalPosition(),
-                rightRing3Rotation: this.rightRing3.getTransform().getLocalRotation(),
-                rightRingTipPosition: this.rightRingTip.getTransform().getLocalPosition(),
-                rightRingTipRotation: this.rightRingTip.getTransform().getLocalRotation(),
+                rightRing1Position: this.rightRing1.getTransform().getLocalPosition().toString(),
+                rightRing1Rotation: this.rightRing1.getTransform().getLocalPosition().toString(),
+                rightRing2Position: this.rightRing2.getTransform().getLocalPosition().toString(),
+                rightRing2Rotation: this.rightRing2.getTransform().getLocalPosition().toString(),
+                rightRing3Position: this.rightRing3.getTransform().getLocalPosition().toString(),
+                rightRing3Rotation: this.rightRing3.getTransform().getLocalPosition().toString(),
+                rightRingTipPosition: this.rightRingTip.getTransform().getLocalPosition().toString(),
+                rightRingTipRotation: this.rightRingTip.getTransform().getLocalPosition().toString(),
             }));
     }
     private saveMotionDataToJson(): void {
@@ -393,115 +278,115 @@ export class DataCollector extends BaseScriptComponent {
 export class HeadHandsMotionData {
     headHandsMotionRecordList: HeadHandsMotionRecord[] = [];
 }
-//
+// d
 // HeadHandsMotionRecord.ts
 export class HeadHandsMotionRecord {
     id: string;
     timeStamp: number;
-    headPosition: vec3;
-    headRotation: quat;
+    headPosition: string;
+    headRotation: string;
 
-    leftWristPosition: vec3;
-    leftWristRotation: quat;
-    leftThumb0Position: vec3;
-    leftThumb0Rotation: quat;
-    leftThumb1Position: vec3;
-    leftThumb1Rotation: quat;
-    leftThumb2Position: vec3;
-    leftThumb2Rotation: quat;
-    leftThumb3Position: vec3;
-    leftThumb3Rotation: quat;
-    leftThumbTipPosition: vec3;
-    leftThumbTipRotation: quat;
+    leftWristPosition: string;
+    leftWristRotation: string;
+    leftThumb0Position: string;
+    leftThumb0Rotation: string;
+    leftThumb1Position: string;
+    leftThumb1Rotation: string;
+    leftThumb2Position: string;
+    leftThumb2Rotation: string;
+    leftThumb3Position: string;
+    leftThumb3Rotation: string;
+    leftThumbTipPosition: string;
+    leftThumbTipRotation: string;
 
-    leftIndex1Position: vec3;
-    leftIndex1Rotation: quat;
-    leftIndex2Position: vec3;
-    leftIndex2Rotation: quat;
-    leftIndex3Position: vec3;
-    leftIndex3Rotation: quat;
-    leftIndexTipPosition: vec3;
-    leftIndexTipRotation: quat;
+    leftIndex1Position: string;
+    leftIndex1Rotation: string;
+    leftIndex2Position: string;
+    leftIndex2Rotation: string;
+    leftIndex3Position: string;
+    leftIndex3Rotation: string;
+    leftIndexTipPosition: string;
+    leftIndexTipRotation: string;
 
-    leftPinky0Position: vec3;
-    leftPinky0Rotation: quat;
-    leftPinky1Position: vec3;
-    leftPinky1Rotation: quat;
-    leftPinky2Position: vec3;
-    leftPinky2Rotation: quat;
-    leftPinky3Position: vec3;
-    leftPinky3Rotation: quat;
-    leftPinkyTipPosition: vec3;
-    leftPinkyTipRotation: quat;
+    leftPinky0Position: string;
+    leftPinky0Rotation: string;
+    leftPinky1Position: string;
+    leftPinky1Rotation: string;
+    leftPinky2Position: string;
+    leftPinky2Rotation: string;
+    leftPinky3Position: string;
+    leftPinky3Rotation: string;
+    leftPinkyTipPosition: string;
+    leftPinkyTipRotation: string;
 
-    leftMiddle1Position: vec3;
-    leftMiddle1Rotation: quat;
-    leftMiddle2Position: vec3;
-    leftMiddle2Rotation: quat;
-    leftMiddle3Position: vec3;
-    leftMiddle3Rotation: quat;
-    leftMiddleTipPosition: vec3;
-    leftMiddleTipRotation: quat;
+    leftMiddle1Position: string;
+    leftMiddle1Rotation: string;
+    leftMiddle2Position: string;
+    leftMiddle2Rotation: string;
+    leftMiddle3Position: string;
+    leftMiddle3Rotation: string;
+    leftMiddleTipPosition: string;
+    leftMiddleTipRotation: string;
 
-    leftRing1Position: vec3;
-    leftRing1Rotation: quat;
-    leftRing2Position: vec3;
-    leftRing2Rotation: quat;
-    leftRing3Position: vec3;
-    leftRing3Rotation: quat;
-    leftRingTipPosition: vec3;
-    leftRingTipRotation: quat;
+    leftRing1Position: string;
+    leftRing1Rotation: string;
+    leftRing2Position: string;
+    leftRing2Rotation: string;
+    leftRing3Position: string;
+    leftRing3Rotation: string;
+    leftRingTipPosition: string;
+    leftRingTipRotation: string;
 
-    rightWristPosition: vec3;
-    rightWristRotation: quat;
-    rightThumb0Position: vec3;
-    rightThumb0Rotation: quat;
-    rightThumb1Position: vec3;
-    rightThumb1Rotation: quat;
-    rightThumb2Position: vec3;
-    rightThumb2Rotation: quat;
-    rightThumb3Position: vec3;
-    rightThumb3Rotation: quat;
-    rightThumbTipPosition: vec3;
-    rightThumbTipRotation: quat;
+    rightWristPosition: string;
+    rightWristRotation: string;
+    rightThumb0Position: string;
+    rightThumb0Rotation: string;
+    rightThumb1Position: string;
+    rightThumb1Rotation: string;
+    rightThumb2Position: string;
+    rightThumb2Rotation: string;
+    rightThumb3Position: string;
+    rightThumb3Rotation: string;
+    rightThumbTipPosition: string;
+    rightThumbTipRotation: string;
 
-    rightIndex1Position: vec3;
-    rightIndex1Rotation: quat;
-    rightIndex2Position: vec3;
-    rightIndex2Rotation: quat;
-    rightIndex3Position: vec3;
-    rightIndex3Rotation: quat;
-    rightIndexTipPosition: vec3;
-    rightIndexTipRotation: quat;
+    rightIndex1Position: string;
+    rightIndex1Rotation: string;
+    rightIndex2Position: string;
+    rightIndex2Rotation: string;
+    rightIndex3Position: string;
+    rightIndex3Rotation: string;
+    rightIndexTipPosition: string;
+    rightIndexTipRotation: string;
 
-    rightPinky0Position: vec3;
-    rightPinky0Rotation: quat;
-    rightPinky1Position: vec3;
-    rightPinky1Rotation: quat;
-    rightPinky2Position: vec3;
-    rightPinky2Rotation: quat;
-    rightPinky3Position: vec3;
-    rightPinky3Rotation: quat;
-    rightPinkyTipPosition: vec3;
-    rightPinkyTipRotation: quat;
+    rightPinky0Position: string;
+    rightPinky0Rotation: string;
+    rightPinky1Position: string;
+    rightPinky1Rotation: string;
+    rightPinky2Position: string;
+    rightPinky2Rotation: string;
+    rightPinky3Position: string;
+    rightPinky3Rotation: string;
+    rightPinkyTipPosition: string;
+    rightPinkyTipRotation: string;
 
-    rightMiddle1Position: vec3;
-    rightMiddle1Rotation: quat;
-    rightMiddle2Position: vec3;
-    rightMiddle2Rotation: quat;
-    rightMiddle3Position: vec3;
-    rightMiddle3Rotation: quat;
-    rightMiddleTipPosition: vec3;
-    rightMiddleTipRotation: quat;
+    rightMiddle1Position: string;
+    rightMiddle1Rotation: string;
+    rightMiddle2Position: string;
+    rightMiddle2Rotation: string;
+    rightMiddle3Position: string;
+    rightMiddle3Rotation: string;
+    rightMiddleTipPosition: string;
+    rightMiddleTipRotation: string;
 
-    rightRing1Position: vec3;
-    rightRing1Rotation: quat;
-    rightRing2Position: vec3;
-    rightRing2Rotation: quat;
-    rightRing3Position: vec3;
-    rightRing3Rotation: quat;
-    rightRingTipPosition: vec3;
-    rightRingTipRotation: quat;
+    rightRing1Position: string;
+    rightRing1Rotation: string;
+    rightRing2Position: string;
+    rightRing2Rotation: string;
+    rightRing3Position: string;
+    rightRing3Rotation: string;
+    rightRingTipPosition: string;
+    rightRingTipRotation: string;
 
     constructor(data: Partial<HeadHandsMotionRecord>) {
         Object.assign(this, data);
