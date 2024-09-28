@@ -11,6 +11,7 @@ tsconfig.json
 # Ignore auto-generated Lens Studio build files
 /build/
 /temp/
+/Cache/
 
 # Ignore log files
 *.log
