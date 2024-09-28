@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 142
+    size: 332
     values:
       - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr
@@ -92,8 +92,39 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
+      - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
+      - SpectaclesInteractionKit/Components/Helpers/InteractableAudioFeedback.ts
+      - SpectaclesInteractionKit/Components/Helpers/InteractableColorFeedback.ts
+      - SpectaclesInteractionKit/Components/Helpers/InteractableOutlineFeedback.ts
+      - SpectaclesInteractionKit/Components/Helpers/InteractableSquishFeedback.ts
+      - SpectaclesInteractionKit/Components/Helpers/ScreenTransformAdapter.ts
+      - SpectaclesInteractionKit/Components/Helpers/SliderFeedback.ts
+      - SpectaclesInteractionKit/Components/Interaction
+      - SpectaclesInteractionKit/Components/Interaction/Billboard
+      - SpectaclesInteractionKit/Components/Interaction/Billboard/Billboard.ts
+      - SpectaclesInteractionKit/Components/Interaction/Billboard/BillboardController.ts
+      - SpectaclesInteractionKit/Components/Interaction/Billboard/BillboardRotationCalculator.ts
+      - SpectaclesInteractionKit/Components/Interaction/HandVisual
+      - SpectaclesInteractionKit/Components/Interaction/HandVisual/GlowEffectView.ts
+      - SpectaclesInteractionKit/Components/Interaction/HandVisual/GlowEffectViewModel.ts
+      - SpectaclesInteractionKit/Components/Interaction/HandVisual/HandVisual.ts
+      - SpectaclesInteractionKit/Components/Interaction/HandVisual/RadialOcclusionView.ts
+      - SpectaclesInteractionKit/Components/Interaction/Headlock
+      - SpectaclesInteractionKit/Components/Interaction/Headlock/Headlock.ts
+      - SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockController.ts
+      - SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockRotationCalculator.ts
+      - SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockTranslationCalculator.ts
+      - SpectaclesInteractionKit/Components/Interaction/Interactable
+      - SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable.ts
+      - SpectaclesInteractionKit/Components/Interaction/InteractableManipulation
+      - SpectaclesInteractionKit/Components/Interaction/InteractableManipulation/InteractableManipulation.ts
+      - SpectaclesInteractionKit/Components/Interaction/InteractorCursor
+      - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CircleVisual.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/Cursor.mat
+      - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CursorController.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CursorMat.ss_graph
+      - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CursorViewModel.ts
+      - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/InteractorCursor.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/ManipulateLineMat.ss_graph
       - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/ManipulateLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/Plane.mesh
@@ -101,12 +132,17 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tl.png
       - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tr.png
       - SpectaclesInteractionKit/Components/Interaction/InteractorCursor/translate.png
+      - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMat.ss_graph
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
-      - SpectaclesInteractionKit/Components/SnapSecure
+      - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
+      - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
       - SpectaclesInteractionKit/Components/SnapSecure/authButtonHandler.js
       - SpectaclesInteractionKit/Components/SnapSecure/dataCollect.js
       - SpectaclesInteractionKit/Components/SnapSecure/dataCollect.ts
+      - SpectaclesInteractionKit/Components/SnapSecure/startDataCollect.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.ss_graph
@@ -139,10 +175,164 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/reflection-map-1.jpg
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/soft-reflection.jpg
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/container-ui.png
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/CursorHandler.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/ForceContainerParent.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/HoverBehavior.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual/SimpleLODRenderMeshVisual.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SnappableBehavior.ts
+      - SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollBar
+      - SpectaclesInteractionKit/Components/UI/ScrollBar/ScrollBar.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView
+      - SpectaclesInteractionKit/Components/UI/ScrollView/GridContentCreator.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView/ScrollArea.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView/ScrollProvider.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView/ScrollView.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider
+      - SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/BoundariesProvider.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/BufferedBoundariesProvider.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/SceneObjectBoundariesProvider.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/ScreenTransformBoundariesProvider.ts
+      - SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/VisualBoundariesProvider.ts
+      - SpectaclesInteractionKit/Components/UI/Slider
+      - SpectaclesInteractionKit/Components/UI/Slider/Slider.ts
+      - SpectaclesInteractionKit/Core
+      - SpectaclesInteractionKit/Core/ConfigurationValidator
+      - SpectaclesInteractionKit/Core/ConfigurationValidator/ConfigurationValidator.ts
+      - SpectaclesInteractionKit/Core/HandInteractor
+      - SpectaclesInteractionKit/Core/HandInteractor/HandInteractor.ts
+      - SpectaclesInteractionKit/Core/InteractionManager
+      - SpectaclesInteractionKit/Core/InteractionManager/EventDispatcher.ts
+      - SpectaclesInteractionKit/Core/InteractionManager/InteractionManager.ts
+      - SpectaclesInteractionKit/Core/Interactor
+      - SpectaclesInteractionKit/Core/Interactor/BaseInteractor.ts
+      - SpectaclesInteractionKit/Core/Interactor/ColliderTargetProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/DirectTargetProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/DragProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/HandRayProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/IndirectTargetProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/Interactor.ts
+      - SpectaclesInteractionKit/Core/Interactor/InteractorEvent.ts
+      - SpectaclesInteractionKit/Core/Interactor/MobileRayProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/MouseTargetProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/PokeTargetProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/RayProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/TouchRayProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/AxisAngle.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/ContinousIrInteractionTransition.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/IrInteractionTransition.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/PinchJumpSuppressor.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorHead.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorVariableShoulder.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastBase.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastLegacySingleCamera.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastProxy.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RgbIrTransitionJumpSuppressor.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/SwitchIrInteractionTransition.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimeDataContainer.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimeScalarContainer.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimedVec2Container.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimedVec3Container.ts
+      - SpectaclesInteractionKit/Core/LogLevelConfiguration
+      - SpectaclesInteractionKit/Core/LogLevelConfiguration/LogLevelConfiguration.ts
+      - SpectaclesInteractionKit/Core/LogLevelConfiguration/SIKLogLevelConfiguration.ts
+      - SpectaclesInteractionKit/Core/MobileInteractor
+      - SpectaclesInteractionKit/Core/MobileInteractor/MobileInteractor.ts
+      - SpectaclesInteractionKit/Core/MouseInteractor
+      - SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
+      - SpectaclesInteractionKit/Declarations
+      - SpectaclesInteractionKit/Declarations/requireAssetDeclaration.d.ts
+      - SpectaclesInteractionKit/Decorators
+      - SpectaclesInteractionKit/Decorators/Singleton.ts
       - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
+      - SpectaclesInteractionKit/Providers
+      - SpectaclesInteractionKit/Providers/CameraProvider
+      - SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
+      - SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
+      - SpectaclesInteractionKit/Providers/CursorControllerProvider
+      - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData
+      - SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/GestureModuleProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetector.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetectorStateMachine.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetectionEvent.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapEvent.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HciPinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HeuristicPinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/PinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetector.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetectorStateMachine.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchEventType.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/HandInputData.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/HandTrackingAssetProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/HandType.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/HandVisuals.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/Joints.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/Keypoint.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/LandmarkNames.ts
       - SpectaclesInteractionKit/Providers/HandInputData/LeftHandAsset.handTracking3D
       - SpectaclesInteractionKit/Providers/HandInputData/RightHandAsset.handTracking3D
+      - SpectaclesInteractionKit/Providers/HandInputData/TargetingData.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/TrackedHand.ts
+      - SpectaclesInteractionKit/Providers/InteractionConfigurationProvider
+      - SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/InteractionConfigurationProvider.ts
+      - SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/LogLevelProvider.ts
+      - SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/SIKLogLevelProvider.ts
+      - SpectaclesInteractionKit/Providers/MobileInputData
+      - SpectaclesInteractionKit/Providers/MobileInputData/MobileInputData.ts
+      - SpectaclesInteractionKit/Providers/TargetProvider
+      - SpectaclesInteractionKit/Providers/TargetProvider/TargetProvider.ts
+      - SpectaclesInteractionKit/Providers/TargetProvider/TargetingData.ts
+      - SpectaclesInteractionKit/SIK.ts
+      - SpectaclesInteractionKit/Utils
+      - SpectaclesInteractionKit/Utils/BistableThreshold.ts
+      - SpectaclesInteractionKit/Utils/Event.ts
+      - SpectaclesInteractionKit/Utils/Filter.ts
+      - SpectaclesInteractionKit/Utils/InputChecker.ts
+      - SpectaclesInteractionKit/Utils/InspectorCallbacks.ts
+      - SpectaclesInteractionKit/Utils/LensConfig.ts
+      - SpectaclesInteractionKit/Utils/LogLevel.ts
+      - SpectaclesInteractionKit/Utils/MovingAverageFilter.ts
+      - SpectaclesInteractionKit/Utils/NativeLogger.ts
+      - SpectaclesInteractionKit/Utils/OneEuroFilter.ts
+      - SpectaclesInteractionKit/Utils/ReplayEvent.ts
+      - SpectaclesInteractionKit/Utils/SafeReference.ts
+      - SpectaclesInteractionKit/Utils/SampleOps.ts
+      - SpectaclesInteractionKit/Utils/SceneObjectUtils.ts
+      - SpectaclesInteractionKit/Utils/SeededRandomNumberGenerator.ts
+      - SpectaclesInteractionKit/Utils/Spatial.ts
+      - SpectaclesInteractionKit/Utils/State.ts
+      - SpectaclesInteractionKit/Utils/StateMachine.ts
+      - SpectaclesInteractionKit/Utils/UpdateDispatcher.ts
+      - SpectaclesInteractionKit/Utils/aabb.ts
+      - SpectaclesInteractionKit/Utils/algorithms.ts
+      - SpectaclesInteractionKit/Utils/animate.ts
+      - SpectaclesInteractionKit/Utils/color.ts
+      - SpectaclesInteractionKit/Utils/debounce.ts
+      - SpectaclesInteractionKit/Utils/lazyProperty.ts
+      - SpectaclesInteractionKit/Utils/logger.ts
+      - SpectaclesInteractionKit/Utils/mathUtils.ts
+      - SpectaclesInteractionKit/Utils/springAnimate.ts
+      - SpectaclesInteractionKit/Utils/views
+      - SpectaclesInteractionKit/Utils/views/LineRenderer
+      - SpectaclesInteractionKit/Utils/views/LineRenderer/LineMeshUtils.ts
+      - SpectaclesInteractionKit/Utils/views/LineRenderer/LineRenderer.ts
+      - SpectaclesInteractionKit/Utils/views/MeshView.ts
+      - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
   options: 4

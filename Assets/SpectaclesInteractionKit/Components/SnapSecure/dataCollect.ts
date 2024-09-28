@@ -1,9 +1,9 @@
 // dataCollect.ts
-import { Interactable } from '../Interaction/Interactable/Interactable';
+import { SIK } from '../../SIK';
 // Head and Hands Tracking Objects
 
 @component
-export class HeadHandsMotionRecorder extends BaseScriptComponent {
+export class DataCollector extends BaseScriptComponent {
     @input
     participantId: string;
     @input

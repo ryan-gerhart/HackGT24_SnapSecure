@@ -652,118 +652,6 @@
     - !<own> 4e6d1f6c-d7ff-4da0-b482-b0c1316e394c
   Components:
     []
-- !<ScriptComponent/14f6a22b-c576-4ca1-adb1-f6166ab77591>
-  PrefabRemaps:
-    []
-  Name: dataCollect
-  Enabled: true
-  ScriptAsset: !<reference> ad878572-4a1c-471f-b2fc-67d1efadcf59
-  ScriptInputsDefault:
-    participantId: true
-    mainFileName: true
-    head: true
-    leftWrist: true
-    rightWrist: true
-    leftThumb0: true
-    leftThumb1: true
-    leftThumb2: true
-    leftThumb3: true
-    leftThumbTip: true
-    leftIndex1: true
-    leftIndex2: true
-    leftIndex3: true
-    leftIndexTip: true
-    leftPinky0: true
-    leftPinky1: true
-    leftPinky2: true
-    leftPinky3: true
-    leftPinkyTip: true
-    leftMiddle1: true
-    leftMiddle2: true
-    leftMiddle3: true
-    leftMiddleTip: true
-    leftRing1: true
-    leftRing2: true
-    leftRing3: true
-    leftRingTip: true
-    rightThumb0: true
-    rightThumb1: true
-    rightThumb2: true
-    rightThumb3: true
-    rightThumbTip: true
-    rightIndex1: true
-    rightIndex2: true
-    rightIndex3: true
-    rightIndexTip: true
-    rightPinky0: true
-    rightPinky1: true
-    rightPinky2: true
-    rightPinky3: true
-    rightPinkyTip: true
-    rightMiddle1: true
-    rightMiddle2: true
-    rightMiddle3: true
-    rightMiddleTip: true
-    rightRing1: true
-    rightRing2: true
-    rightRing3: true
-    rightRingTip: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      participantId: ""
-      mainFileName: ""
-      head: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftWrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightWrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftThumb0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftThumb1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftThumb2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftThumb3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftThumbTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftIndex1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftIndex2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftIndex3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftIndexTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftPinky0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftPinky1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftPinky2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftPinky3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftPinkyTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftMiddle1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftMiddle2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftMiddle3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftMiddleTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftRing1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftRing2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftRing3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      leftRingTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightThumb0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightThumb1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightThumb2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightThumb3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightThumbTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightIndex1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightIndex2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightIndex3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightIndexTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightPinky0: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightPinky1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightPinky2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightPinky3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightPinkyTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightMiddle1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightMiddle2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightMiddle3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightMiddleTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightRing1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightRing2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightRing3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      rightRingTip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/14f6a9fe-f96c-440a-81b6-76623b5462e5>
   PrefabRemaps:
     []
@@ -1217,6 +1105,59 @@
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
       allowMultipleInteractors: true
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/2804994f-bf81-4b71-ad18-a68161dfc714>
+  PrefabRemaps:
+    []
+  Name: dataCollect
+  Enabled: false
+  ScriptAsset: !<reference> fb8e5467-b20c-41b4-830f-0ea91e2231bc
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      head: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      leftWrist: !<reference.SceneObject> 9cedc16a-c9e5-4a68-864c-3a6193939290
+      rightWrist: !<reference.SceneObject> 6c82bb54-cde7-40cc-b09a-ae0407d4a7e4
+      leftThumb0: !<reference.SceneObject> c0fbe2e8-b696-42bd-aa0d-28c8c92aca11
+      leftThumb1: !<reference.SceneObject> bb442796-5475-4695-9191-7b4a8924ddf6
+      leftThumb2: !<reference.SceneObject> e1e61e4a-f61f-4b8e-9778-77240c5d03b4
+      leftThumb3: !<reference.SceneObject> 49bc520e-979b-41dd-af92-c39d30a5a1c3
+      leftIndex1: !<reference.SceneObject> 82686826-4088-45dd-a8f0-03683796ce78
+      leftIndex2: !<reference.SceneObject> e61d4d85-a08b-4b79-8a78-bd11a94171f2
+      leftIndex3: !<reference.SceneObject> 45c0ee0b-4eae-4c81-8af1-44947508de3f
+      leftMiddle1: !<reference.SceneObject> 37a62259-1ce7-4744-b6ea-dc2c55f35328
+      leftMiddle2: !<reference.SceneObject> 254b9e85-b5d1-400f-8c84-83dd52f95100
+      leftMiddle3: !<reference.SceneObject> 6796d74c-36de-4973-b60f-26723675de0e
+      leftRing1: !<reference.SceneObject> bc7ca399-42d5-43ce-8b46-6e31b628daf7
+      leftRing2: !<reference.SceneObject> 7c03fc5d-a618-491d-815e-9698ccc95eb8
+      leftRing3: !<reference.SceneObject> 95af3b28-6f17-49e5-80c3-e8a9c88ee332
+      leftPinky0: !<reference.SceneObject> a7e3803f-d6eb-43f5-a3ba-c5146b5dd058
+      leftPinky1: !<reference.SceneObject> c6ca57a4-4187-47c4-9817-27f2853e83c5
+      leftPinky2: !<reference.SceneObject> 49316d12-58fb-4a4a-b09c-cc6a9303dbe6
+      leftPinky3: !<reference.SceneObject> fa8a056a-2062-4c94-a29d-dedf42c65e7d
+      rightThumb0: !<reference.SceneObject> 24bab02f-73f1-439d-bb0c-0559574f0782
+      rightThumb1: !<reference.SceneObject> dc97552e-2a04-4019-8979-482f91a5824f
+      rightThumb2: !<reference.SceneObject> fc8e7153-7b17-491b-9c4b-1a7d19a6e707
+      rightThumb3: !<reference.SceneObject> b50d0664-596f-4bd5-9d00-f8f4d7e27a90
+      rightIndex1: !<reference.SceneObject> a5dcc3e5-e051-4ad2-9f3c-361dc8e16680
+      rightIndex2: !<reference.SceneObject> b9d14d3a-7945-428c-a768-41692c2eba14
+      rightIndex3: !<reference.SceneObject> 88a2a29b-d368-412c-9f01-3bd535c31027
+      rightMiddle1: !<reference.SceneObject> 001d8b74-6a85-4cdd-b231-fd1bdfc8e8d0
+      rightMiddle2: !<reference.SceneObject> 3f9892ea-ded0-4c59-ac79-5f72c2580b41
+      rightMiddle3: !<reference.SceneObject> 146c3d55-6548-4c7f-a4a4-22f402575f4f
+      rightRing1: !<reference.SceneObject> e5f5a9b5-8c25-4543-8704-b054151e7f27
+      rightRing2: !<reference.SceneObject> 7b545c21-569f-42ee-a8bc-6788a927d730
+      rightRing3: !<reference.SceneObject> 44d3ae72-34ce-490d-97d1-811ee37f1a40
+      rightPinky0: !<reference.SceneObject> a53b5990-7f09-4804-a3ac-d5306340a40d
+      rightPinky1: !<reference.SceneObject> 6a3dbaa3-d10c-4f71-840d-2b8b8184b67c
+      rightPinky2: !<reference.SceneObject> 3b2ad7c8-6228-4421-aad9-65db4e6860b7
+      rightPinky3: !<reference.SceneObject> fa0dcbdf-ddc9-4890-90e2-d81f925fe239
+      sampleRateHz: !<float> 30.000000
   ScriptTypes:
     "":
       {}
@@ -1997,8 +1938,8 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 11.483000, z: -0.000001}
-    rotation: {x: 1.265800, y: 6.113890, z: -3.274570}
+    position: {x: -0.000000, y: 11.483001, z: -0.000001}
+    rotation: {x: 1.265802, y: 6.113891, z: -3.274582}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -2290,6 +2231,7 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> c68566dd-f839-4620-8f50-59db48f84274
+    - !<own> 9c02a2bd-4130-419e-9139-d418a04871da
   Components:
     - !<own> 7d615919-89af-47ba-b9d5-2f833477b68d
 - !<SceneObject/4c194481-fd5b-43b0-9e1b-2dd8726745ae>
@@ -4519,21 +4461,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/8eaa3a93-73f2-4a1d-a398-f921b3e7602d>
-  PrefabRemaps:
-    []
-  Name: DataCollection
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 14f6a22b-c576-4ca1-adb1-f6166ab77591
 - !<ScriptComponent/9149c36c-4fcf-4c64-be4a-2837b046580b>
   PrefabRemaps:
     []
@@ -4817,6 +4744,22 @@
   Components:
     - !<own> c552cfce-93ed-4c64-81c8-5918bc273fd1
     - !<own> 6432446e-82f8-4c46-bfb9-e6df9672d79a
+- !<SceneObject/9c02a2bd-4130-419e-9139-d418a04871da>
+  PrefabRemaps:
+    []
+  Name: DataCollector
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 5.000000, z: 65.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2804994f-bf81-4b71-ad18-a68161dfc714
+    - !<own> c9755fe3-ed73-492b-8463-8a29567f1d22
 - !<SceneObject/9cedc16a-c9e5-4a68-864c-3a6193939290>
   PrefabRemaps:
     []
@@ -4912,7 +4855,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 8
+  RenderOrder: 7
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -5557,7 +5500,6 @@
     - !<own> e7c7be4e-0d9b-4cd3-baea-a871d82011d6
     - !<own> 485ae9f9-f457-48fc-8e85-fe9ff72addc9
     - !<own> 14f6a9fe-f96c-440a-81b6-76623b5462e5
-    - !<own> 8eaa3a93-73f2-4a1d-a398-f921b3e7602d
   Components:
     []
 - !<SceneObject/ac31778e-bd43-42a4-97bc-4f485fb095fc>
@@ -6562,6 +6504,70 @@
     []
   Components:
     []
+- !<ScriptComponent/c9755fe3-ed73-492b-8463-8a29567f1d22>
+  PrefabRemaps:
+    []
+  Name: dataCollect
+  Enabled: true
+  ScriptAsset: !<reference> ad878572-4a1c-471f-b2fc-67d1efadcf59
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      participantId: !<string> 1
+      mainFileName: dataOne
+      head: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      leftWrist: !<reference.SceneObject> 9cedc16a-c9e5-4a68-864c-3a6193939290
+      rightWrist: !<reference.SceneObject> 6c82bb54-cde7-40cc-b09a-ae0407d4a7e4
+      leftThumb0: !<reference.SceneObject> c0fbe2e8-b696-42bd-aa0d-28c8c92aca11
+      leftThumb1: !<reference.SceneObject> bb442796-5475-4695-9191-7b4a8924ddf6
+      leftThumb2: !<reference.SceneObject> e1e61e4a-f61f-4b8e-9778-77240c5d03b4
+      leftThumb3: !<reference.SceneObject> 49bc520e-979b-41dd-af92-c39d30a5a1c3
+      leftThumbTip: !<reference.SceneObject> ff21c245-9565-4f69-827d-5d3a6411b557
+      leftIndex1: !<reference.SceneObject> 82686826-4088-45dd-a8f0-03683796ce78
+      leftIndex2: !<reference.SceneObject> e61d4d85-a08b-4b79-8a78-bd11a94171f2
+      leftIndex3: !<reference.SceneObject> 45c0ee0b-4eae-4c81-8af1-44947508de3f
+      leftIndexTip: !<reference.SceneObject> a0a63f72-25a0-4d69-9417-5662e98b01e3
+      leftPinky0: !<reference.SceneObject> a7e3803f-d6eb-43f5-a3ba-c5146b5dd058
+      leftPinky1: !<reference.SceneObject> c6ca57a4-4187-47c4-9817-27f2853e83c5
+      leftPinky2: !<reference.SceneObject> 49316d12-58fb-4a4a-b09c-cc6a9303dbe6
+      leftPinky3: !<reference.SceneObject> fa8a056a-2062-4c94-a29d-dedf42c65e7d
+      leftPinkyTip: !<reference.SceneObject> 3ca998f8-03b3-4480-9fb6-c106f2952b90
+      leftMiddle1: !<reference.SceneObject> 37a62259-1ce7-4744-b6ea-dc2c55f35328
+      leftMiddle2: !<reference.SceneObject> 254b9e85-b5d1-400f-8c84-83dd52f95100
+      leftMiddle3: !<reference.SceneObject> 6796d74c-36de-4973-b60f-26723675de0e
+      leftMiddleTip: !<reference.SceneObject> ea015d35-5918-4f78-a6f5-a17df2637bd4
+      leftRing1: !<reference.SceneObject> bc7ca399-42d5-43ce-8b46-6e31b628daf7
+      leftRing2: !<reference.SceneObject> 7c03fc5d-a618-491d-815e-9698ccc95eb8
+      leftRing3: !<reference.SceneObject> 95af3b28-6f17-49e5-80c3-e8a9c88ee332
+      leftRingTip: !<reference.SceneObject> 4c194481-fd5b-43b0-9e1b-2dd8726745ae
+      rightThumb0: !<reference.SceneObject> 24bab02f-73f1-439d-bb0c-0559574f0782
+      rightThumb1: !<reference.SceneObject> dc97552e-2a04-4019-8979-482f91a5824f
+      rightThumb2: !<reference.SceneObject> fc8e7153-7b17-491b-9c4b-1a7d19a6e707
+      rightThumb3: !<reference.SceneObject> b50d0664-596f-4bd5-9d00-f8f4d7e27a90
+      rightThumbTip: !<reference.SceneObject> b1a805b2-6eb9-49e5-918e-db0608d22c04
+      rightIndex1: !<reference.SceneObject> a5dcc3e5-e051-4ad2-9f3c-361dc8e16680
+      rightIndex2: !<reference.SceneObject> b9d14d3a-7945-428c-a768-41692c2eba14
+      rightIndex3: !<reference.SceneObject> 88a2a29b-d368-412c-9f01-3bd535c31027
+      rightIndexTip: !<reference.SceneObject> d2fbbe47-d72e-4471-a1f1-02ffbcbe9212
+      rightPinky0: !<reference.SceneObject> a7e3803f-d6eb-43f5-a3ba-c5146b5dd058
+      rightPinky1: !<reference.SceneObject> c6ca57a4-4187-47c4-9817-27f2853e83c5
+      rightPinky2: !<reference.SceneObject> 49316d12-58fb-4a4a-b09c-cc6a9303dbe6
+      rightPinky3: !<reference.SceneObject> fa8a056a-2062-4c94-a29d-dedf42c65e7d
+      rightPinkyTip: !<reference.SceneObject> 3ca998f8-03b3-4480-9fb6-c106f2952b90
+      rightMiddle1: !<reference.SceneObject> 001d8b74-6a85-4cdd-b231-fd1bdfc8e8d0
+      rightMiddle2: !<reference.SceneObject> 3f9892ea-ded0-4c59-ac79-5f72c2580b41
+      rightMiddle3: !<reference.SceneObject> 146c3d55-6548-4c7f-a4a4-22f402575f4f
+      rightMiddleTip: !<reference.SceneObject> 4e6d1f6c-d7ff-4da0-b482-b0c1316e394c
+      rightRing1: !<reference.SceneObject> e5f5a9b5-8c25-4543-8704-b054151e7f27
+      rightRing2: !<reference.SceneObject> 7b545c21-569f-42ee-a8bc-6788a927d730
+      rightRing3: !<reference.SceneObject> 44d3ae72-34ce-490d-97d1-811ee37f1a40
+      rightRingTip: !<reference.SceneObject> 43d0e3f6-94eb-4ee1-a4b3-12cc32c39486
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/c99ee9c2-c940-4c10-9c00-6df31f99c027>
   PrefabRemaps:
     []
@@ -7589,7 +7595,6 @@
   Enabled: true
   ScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
   ScriptInputsDefault:
-    hoveringColor: true
     activatingColor: true
     outlineWeight: true
   ScriptTypesDefault:
@@ -7597,7 +7602,7 @@
   ScriptInputs:
     "":
       targetOutlineMaterial: !<reference.Material> 7231c7bc-6c14-4331-ad23-9ab928107707
-      hoveringColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 0.040000, w: 1.000000}
+      hoveringColor: !<Vec4> {x: 0.000000, y: 0.298039, z: 1.000000, w: 1.000000}
       activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       outlineWeight: -0.250000
       meshVisuals: !<reference.RenderMeshVisual[]>
@@ -7749,17 +7754,15 @@
   Enabled: true
   ScriptAsset: !<reference> ad94751b-0846-4ee3-af41-7b0eb49b2e2c
   ScriptInputsDefault:
-    defaultColor: true
     hoverColor: true
-    pinchedColor: true
     disabledColor: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      defaultColor: !<Vec4> {x: 0.280000, y: 0.280000, z: 0.280000, w: 1.000000}
+      defaultColor: !<Vec4> {x: 0.000000, y: 0.278431, z: 0.047059, w: 1.000000}
       hoverColor: !<Vec4> {x: 0.280000, y: 0.280000, z: 0.280000, w: 1.000000}
-      pinchedColor: !<Vec4> {x: 0.460000, y: 0.460000, z: 0.460000, w: 1.000000}
+      pinchedColor: !<Vec4> {x: 0.188235, y: 0.596078, z: 0.000000, w: 1.000000}
       disabledColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.000000}
       meshVisuals: !<reference.RenderMeshVisual[]>
         - !<reference> 9ee20fbc-ebf6-4b53-b262-09e8435f5c8b

@@ -6,8 +6,3 @@ CollapsedEntities:
       - 51d43286-9b57-4479-bb17-120e98e700f2
       - 9caea4b3-b34e-4cef-8d93-76d9fe148807
   options: 4
-PinnedEntities:
-  type: "std::vector<class Es::Uuid,class std::allocator<class Es::Uuid> >"
-  value:
-    size: 0
-  options: 4
