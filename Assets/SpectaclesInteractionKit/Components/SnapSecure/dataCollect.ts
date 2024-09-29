@@ -137,6 +137,8 @@ export class DataCollector extends BaseScriptComponent {
             this.isRecording = true;
             }
             //this.motionData.headHandsMotionRecordList = []; // Clear previous session data
+	    this.headHandsMotionData.clear();
+		
             print('start recording invoked');
             this.recordMotionData();
         
@@ -167,8 +169,7 @@ export class DataCollector extends BaseScriptComponent {
             this.headHandsMotionData.addMotionRecord(
                 this.id, 
                 this.timeReference / 1000,
-                { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
-                { x: this.head.getTransform().getLocalRotation().x, y: this.head.getTransform().getLocalRotation().y, z: this.head.getTransform().getLocalRotation().z, w: this.head.getTransform().getLocalRotation().w},
+                {y: this.head.getTransform().getLocalPosition().y},
                 );
     }//
     private saveMotionDataToJson(): void {
@@ -204,22 +205,14 @@ export class headHandsMotionRecord {
         this.headControllersMotionRecordList = [];
     }
     // Method to add a new motion record
-    addMotionRecord(id, timeStamp, headPosition, headRotation) {
+    addMotionRecord(id, timeStamp, headPosition) {
         //
         const motionRecord = {
             id: id,
             timeStamp: timeStamp,
             headPosition: {
-                x: headPosition.x,
                 y: headPosition.y,
-                z: headPosition.z
             },//
-            headRotation: {
-                x: headRotation.x,
-                y: headRotation.y,
-                z: headRotation.z,
-                w: headRotation.w
-            },
         };
 
         this.headControllersMotionRecordList.push(motionRecord);
