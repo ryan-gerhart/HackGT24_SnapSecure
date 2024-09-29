@@ -160,7 +160,7 @@ export class DataCollector extends BaseScriptComponent {
            this.saveMotionDataToJson();
     }
 
-
+//
    private recordMotionData() {
         //
         print('creating json');
@@ -168,11 +168,7 @@ export class DataCollector extends BaseScriptComponent {
                 this.id, 
                 this.timeReference += getDeltaTime(),
                 { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
-                { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
-                { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
-                { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
-                { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
-                { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
+                { x: this.head.getTransform().getLocalRotation().x, y: this.head.getTransform().getLocalRotation().y, z: this.head.getTransform().getLocalRotation().z, w: this.head.getTransform().getLocalRotation().w},
                 );
     }
     private saveMotionDataToJson(): void {
@@ -192,6 +188,7 @@ export class DataCollector extends BaseScriptComponent {
 //    }
 }
 // hella
+//
 // this.headHandsMotionData.ts
 
 // d
@@ -207,7 +204,7 @@ export class headHandsMotionRecord {
         this.headControllersMotionRecordList = [];
     }
     // Method to add a new motion record
-    addMotionRecord(id, timeStamp, headPosition, headRotation, leftHandPosition, leftHandRotation, rightHandPosition, rightHandRotation) {
+    addMotionRecord(id, timeStamp, headPosition, headRotation) {
         //
         const motionRecord = {
             id: id,
@@ -220,28 +217,9 @@ export class headHandsMotionRecord {
             headRotation: {
                 x: headRotation.x,
                 y: headRotation.y,
-                z: headRotation.z
+                z: headRotation.z,
+                w: headRotation.w
             },
-            leftHandPosition: {
-                x: leftHandPosition.x,
-                y: leftHandPosition.y,
-                z: leftHandPosition.z
-            },
-            leftHandRotation: {
-                x: leftHandRotation.x,
-                y: leftHandRotation.y,
-                z: leftHandRotation.z
-            },
-            rightHandPosition: {
-                x: rightHandPosition.x,
-                y: rightHandPosition.y,
-                z: rightHandPosition.z
-            },
-            rightHandRotation: {
-                x: rightHandRotation.x,
-                y: rightHandRotation.y,
-                z: rightHandRotation.z
-            }
         };
 
         this.headControllersMotionRecordList.push(motionRecord);

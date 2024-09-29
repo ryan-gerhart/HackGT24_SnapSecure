@@ -40,9 +40,8 @@ export class StartDataCollect extends BaseScriptComponent {
             this.dataCollector.startRecording();
             this.timer += getDeltaTime()
             print(this.timer);
-            
+            this.dataCollector.stopRecording();
         }
-        this.dataCollector.stopRecording();
         this.dataCollector.save();
 
         this.timer = 0;
