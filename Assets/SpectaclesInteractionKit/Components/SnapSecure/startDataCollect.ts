@@ -9,7 +9,7 @@ export class StartDataCollect extends BaseScriptComponent {
     dataCollector : DataCollector
     //
     private interactable: Interactable
-    private timer: number
+    private startTime: number
     onAwake() {
           this.defineScriptEvents();
     }
@@ -25,7 +25,7 @@ export class StartDataCollect extends BaseScriptComponent {
       if (this.interactable === null || this.interactable === undefined) {
           throw new Error('PointerColorVisual script requires an Interactable on the same SceneObject');
       }
-      this.timer = 0;
+      this.startTime = 0;
       this.setupInteractableCallbacks(this.interactable);
   }
   setupInteractableCallbacks(interactable: Interactable) {
@@ -33,18 +33,25 @@ export class StartDataCollect extends BaseScriptComponent {
           this.recordData();
       });
   }
-    //
+
   private recordData() {
+        print('get time: ' + getTime());
         print('recording data');
-        this.dataCollector.resetTimeReference();
-        while (this.timer < 2) {
+        this.startTime = new Date().getTime();
+        var delta = new Date().getTime() - this.startTime;
+        this.dataCollector.setDelta(delta);
+        print(delta);
+        while (delta < 2) {
             this.dataCollector.startRecording();
-            this.timer += getDeltaTime()
-            print(this.timer);
+            delta = new Date().getTime() - this.startTime;
+            print(getTime());
+            print('delta: ' + delta)
+            this.dataCollector.setDelta(delta);
+            print(this.startTime);
             this.dataCollector.stopRecording();
         }
         this.dataCollector.save();
 
-        this.timer = 0;
+        this.startTime = 0;
   }
 }

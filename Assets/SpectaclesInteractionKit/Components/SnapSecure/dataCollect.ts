@@ -142,8 +142,8 @@ export class DataCollector extends BaseScriptComponent {
         
     }
     
-    public resetTimeReference(): void {
-        this.timeReference = 0;
+    public setDelta(delta: number): void {
+        this.timeReference = delta;
     }
     public stopRecording(): void {
         if (this.isRecording) {
@@ -170,7 +170,7 @@ export class DataCollector extends BaseScriptComponent {
                 { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
                 { x: this.head.getTransform().getLocalRotation().x, y: this.head.getTransform().getLocalRotation().y, z: this.head.getTransform().getLocalRotation().z, w: this.head.getTransform().getLocalRotation().w},
                 );
-    }
+    }//
     private saveMotionDataToJson(): void {
         print(this.headHandsMotionData.getRecordList().length);
         this.mainJSON.headControllersMotionRecordList.push(this.headHandsMotionData.getRecordList());
