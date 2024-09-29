@@ -166,7 +166,7 @@ export class DataCollector extends BaseScriptComponent {
         print('creating json');
             this.headHandsMotionData.addMotionRecord(
                 this.id, 
-                this.timeReference += getDeltaTime(),
+                this.timeReference / 1000,
                 { x: this.head.getTransform().getLocalPosition().x, y: this.head.getTransform().getLocalPosition().y, z: this.head.getTransform().getLocalPosition().z},
                 { x: this.head.getTransform().getLocalRotation().x, y: this.head.getTransform().getLocalRotation().y, z: this.head.getTransform().getLocalRotation().z, w: this.head.getTransform().getLocalRotation().w},
                 );
