@@ -10,6 +10,8 @@ export class StartDataCollect extends BaseScriptComponent {
     //
     private interactable: Interactable
     private startTime: number
+    private isRunning: Boolean
+    private firstFalse: Boolean
     onAwake() {
           this.defineScriptEvents();
     }
@@ -27,31 +29,36 @@ export class StartDataCollect extends BaseScriptComponent {
       }
       this.startTime = 0;
       this.setupInteractableCallbacks(this.interactable);
+      
   }
   setupInteractableCallbacks(interactable: Interactable) {
       interactable.onTriggerEnd.add(() => {
-          this.recordData();
-      });
-  }
-
-  private recordData() {
-        print('get time: ' + getTime());
-        print('recording data');
-        this.startTime = new Date().getTime();
+          this.startTime = new Date().getTime();
+          var event = this.createEvent("UpdateEvent");
+          this.isRunning = true;
+          this.firstFalse = true;
+          event.bind(() => this.recordData());
+    });
+   }
+    
+    private recordData(): void {
         var delta = new Date().getTime() - this.startTime;
-        this.dataCollector.setDelta(delta);
-        print(delta);
-        while (delta < 1000) {
+        if (delta > 2000) {
+            this.isRunning = false;
+            if (this.firstFalse) {
+                this.dataCollector.save();
+                this.firstFalse = false;
+            }
+        }
+        if (this.isRunning) {
+            
+            this.dataCollector.setDelta(delta);
             this.dataCollector.startRecording();
             delta = new Date().getTime() - this.startTime;
-            print(getTime());
-            print('delta: ' + delta)
             this.dataCollector.setDelta(delta);
-            print(this.startTime);
             this.dataCollector.stopRecording();
-        }//
-        this.dataCollector.save();
-
-        this.startTime = 0;
-  }
+        }
+        
+            
+        }
 }
