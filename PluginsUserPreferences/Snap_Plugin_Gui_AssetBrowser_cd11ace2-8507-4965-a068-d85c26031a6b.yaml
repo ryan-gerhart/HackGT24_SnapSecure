@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 340
+    size: 359
     values:
       - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr
@@ -11,16 +11,27 @@ CollapsedEntities:
       - Image 2.mat
       - Image 3.mat
       - Image 4.mat
+      - Image.mat
+      - Image.png
+      - ImageMaterial 1.mat
+      - ImageMaterial 2.mat
+      - ImageMaterial 3.mat
+      - ImageMaterial 4.mat
+      - ImageMaterial 5.mat
       - ImageMaterial 6.mat
       - ImageMaterial 7.mat
       - ImageMaterial 8.mat
+      - ImageMaterial.mat
       - Remote Service Module.remoteServiceModule
       - Render Target.renderTarget
       - Scene.scene
+      - ScreenTexture.screenTexture
+      - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerStartAudioTrack.wav
+      - SpectaclesInteractionKit/Assets/Materials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/PaintedGlow_Left.mat
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/PaintedGlow_Right.mat
@@ -49,6 +60,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/SpritePreset.mat
       - SpectaclesInteractionKit/Assets/Materials/TargetOutlineMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/Text3DDefault.mat
+      - SpectaclesInteractionKit/Assets/Meshes
       - SpectaclesInteractionKit/Assets/Meshes/BoxMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonCapsuleMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonSphereMesh.mesh
@@ -62,6 +74,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/SnapGhost_Mesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/SphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Uncheck.mesh
+      - SpectaclesInteractionKit/Assets/Shaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/PaintedGlow_Left.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/PaintedGlow_Right.ss_graph
@@ -341,6 +354,12 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
+      - fingerAllTap.mp4
       - fingeralltap_wyQdAAIq.mp4
+      - flat.ss_graph
+      - headmove.mp4
       - headmove_GqQhnjSR.mp4
+      - image_unlit.ss_graph
+      - pointerTap.mp4
+      - pointertap_IFphr58B.mp4
   options: 4
