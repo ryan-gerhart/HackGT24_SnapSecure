@@ -231,14 +231,3 @@ export class headHandsMotionRecord {
 function getCurrentTime(): number {
     return Date.now();
 }
-// the
-function wait(seconds: number): void {
-    var delayedEvent = this.createEvent("DelayedCallbackEvent");
-    delayedEvent.bind(function(eventData)
-    {
-        print("Delay is over");
-    });
-    
-    delayedEvent.reset(seconds);
-    print("delay has started");   
-}

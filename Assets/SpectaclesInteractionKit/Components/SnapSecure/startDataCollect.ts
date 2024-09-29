@@ -41,7 +41,7 @@ export class StartDataCollect extends BaseScriptComponent {
         var delta = new Date().getTime() - this.startTime;
         this.dataCollector.setDelta(delta);
         print(delta);
-        while (delta < 2000) {
+        while (delta < 1000) {
             this.dataCollector.startRecording();
             delta = new Date().getTime() - this.startTime;
             print(getTime());
