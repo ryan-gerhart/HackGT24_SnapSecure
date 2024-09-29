@@ -8015,11 +8015,12 @@
   Enabled: true
   ScriptAsset: !<reference> ad878572-4a1c-471f-b2fc-67d1efadcf59
   ScriptInputsDefault:
-    {}
+    id: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      id: !<float> 0.000000
       participantId: !<string> 1
       head: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       leftWrist: !<reference.SceneObject> d12486b6-e321-4e62-a899-f43db5185417

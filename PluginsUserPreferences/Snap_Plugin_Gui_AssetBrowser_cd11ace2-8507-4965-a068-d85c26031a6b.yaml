@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 340
+    size: 338
     values:
       - Device Camera Texture.deviceCameraTexture
       - Echopark.hdr
@@ -141,8 +141,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
-      - SpectaclesInteractionKit/Components/SnapSecure/authButtonHandler.js
-      - SpectaclesInteractionKit/Components/SnapSecure/dataCollect.js
       - SpectaclesInteractionKit/Components/SnapSecure/dataCollect.ts
       - SpectaclesInteractionKit/Components/SnapSecure/httpRequest.ts
       - SpectaclesInteractionKit/Components/SnapSecure/startDataCollect.ts
