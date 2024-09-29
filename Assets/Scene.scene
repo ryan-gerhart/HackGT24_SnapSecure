@@ -3227,6 +3227,22 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
+- !<ScriptComponent/45a707d5-f997-412b-8ed3-c20e1bb26dc1>
+  PrefabRemaps:
+    []
+  Name: startDataCollect
+  Enabled: true
+  ScriptAsset: !<reference> 1c27cd4d-c21c-4ac4-95bf-7e7a3e4aa88c
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      dataCollector: !<MappingBased.dataCollect> 949ad3be-9f93-44f8-90a0-3e4e4d02ed43
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/4642589a-75f7-4f90-a0b6-4095339940dc>
   PrefabRemaps:
     []
@@ -8015,8 +8031,8 @@
     {}
   ScriptInputs:
     "":
-      VideoChosen: !<reference.SceneObject> 4309c5e3-2551-4e5e-80fb-0064817468f7
-      Video2: !<reference.SceneObject> f2d2b3fb-6e46-4214-b1a8-84e342869ea3
+      VideoChosen: !<reference.SceneObject> f2d2b3fb-6e46-4214-b1a8-84e342869ea3
+      Video2: !<reference.SceneObject> 4309c5e3-2551-4e5e-80fb-0064817468f7
       Video3: !<reference.SceneObject> f28775ca-ae1b-4b17-b545-8cc3ed6a20b8
   ScriptTypes:
     "":
@@ -8514,22 +8530,6 @@
     - !<own> b46c3d38-4f42-4702-9ac3-68e82da67239
   Components:
     []
-- !<ScriptComponent/ac3a1d0b-7ea9-47de-b383-149bc2dce1fd>
-  PrefabRemaps:
-    []
-  Name: startDataCollect
-  Enabled: true
-  ScriptAsset: !<reference> 64f97ab0-bcc1-4458-87c3-a59f9b0672a6
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      dataCollector: !<MappingBased.dataCollect> 949ad3be-9f93-44f8-90a0-3e4e4d02ed43
-  ScriptTypes:
-    "":
-      {}
 - !<ScreenTransform/acbcbff6-eecf-4ebe-9fd5-91e7811fe8ca>
   PrefabRemaps:
     []
@@ -10082,9 +10082,9 @@
     {}
   ScriptInputs:
     "":
-      VideoChosen: !<reference.SceneObject> f28775ca-ae1b-4b17-b545-8cc3ed6a20b8
+      VideoChosen: !<reference.SceneObject> f2d2b3fb-6e46-4214-b1a8-84e342869ea3
       Video2: !<reference.SceneObject> 4309c5e3-2551-4e5e-80fb-0064817468f7
-      Video3: !<reference.SceneObject> f2d2b3fb-6e46-4214-b1a8-84e342869ea3
+      Video3: !<reference.SceneObject> f28775ca-ae1b-4b17-b545-8cc3ed6a20b8
   ScriptTypes:
     "":
       {}
@@ -12165,7 +12165,7 @@
     - !<own> 706531b9-ed6e-4759-be50-186d898c59f6
     - !<own> 4796a399-eb78-44a7-8e28-46644f38da71
     - !<own> 0af1c395-9d9d-4393-b794-4172544831f7
-    - !<own> ac3a1d0b-7ea9-47de-b383-149bc2dce1fd
+    - !<own> 45a707d5-f997-412b-8ed3-c20e1bb26dc1
 - !<Text/fe4ee68b-14f6-482b-984b-ab140636ed94>
   PrefabRemaps:
     []

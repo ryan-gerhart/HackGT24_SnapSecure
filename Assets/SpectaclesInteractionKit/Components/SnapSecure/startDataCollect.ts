@@ -33,10 +33,10 @@ export class StartDataCollect extends BaseScriptComponent {
           this.recordData();
       });
   }
+    //
   private recordData() {
         print('recording data');
-        
-        
+        this.dataCollector.resetTimeReference();
         while (this.timer < 2) {
             this.dataCollector.startRecording();
             this.timer += getDeltaTime()
